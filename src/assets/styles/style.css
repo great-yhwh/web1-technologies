@@ -10,6 +10,16 @@
     color: red !important;
 }
 
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.image {
+    max-height: 350px;
+    max-width: 350px;
+}
+
 .paragraph{
     font-size: 16px;
     line-height: 26px;
@@ -47,7 +57,15 @@
 .header-ul {
     overflow: hidden;
     padding: 0;
-    background: linear-gradient(to top, #4C7F8D, #F3F6F6 );
+}
+
+.header-ul-item {
+    font-family: "Inter", sans-serif;
+}
+
+
+.header-ul-item a {
+    color: #18181a;
 }
 
 
@@ -86,9 +104,28 @@
     overflow: hidden;
 }
 
-.breadcrumb-item{
+.breadcrumb-item {
+    font-family: "Inter2", sans-serif;
     padding: .5rem 1rem;
     border-radius: 0 1.5rem 1.5rem 0;
     border-right: 2px solid white;
-    box-shadow: 1px 0 1px black;
+    box-shadow: 2px 0 2px black;
+}
+.breadcrumb-item a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: #18181a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.breadcrumb-logo {
+    padding-right: 30px;
+}
+.breadcrumb-logo img{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 50%;
+    display: block;
 }

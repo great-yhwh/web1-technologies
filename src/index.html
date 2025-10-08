@@ -6,18 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
 <!--        Шапка сайта-->
 <header>
-    <img src="assets/img/logo.jpg" alt="Логотип"
-         style="max-height: 100px; max-width: 100px ">
     <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-logo"><img src="assets/img/logo.jpg" alt="Логотип" class="logo"></li>
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
 </header>
@@ -49,7 +47,6 @@
         Производим мебель на заказ
         и уникальные элементы декора.
     </p>
-    <hr>
 </main>
 <!--            Подвал сайта-->
 <footer>
@@ -59,13 +56,12 @@
     <p class="paragraph">
         Готовы обсудить ваш проект или ответить на вопросы.
     </p>
-    <hr>
     <!--                Список контактов-->
-    <ul>
-        <li>г. Город, ул. Улица, д. Цифра</li>
-        <li>Телефон:
+    <ul class="header-ul">
+        <li class="header-ul-item">г. Город, ул. Улица, д. Цифра</li>
+        <li class="header-ul-item">Телефон:
             <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
-        <li>Электронная почта:
+        <li class="header-ul-item">Электронная почта:
             <a href="mailto:zakaz@stolyar-dvor.ru">zakaz@stolyar-dvor.ru</a></li>
     </ul>
     <p class="paragraph">
