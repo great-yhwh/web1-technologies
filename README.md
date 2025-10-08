@@ -91,3 +91,17 @@
 </body>
 </html>
 
+<h1>index.html</h1>
+<img width="672" height="633" alt="Снимок экрана 2025-10-08 в 22 01 36" src="https://github.com/user-attachments/assets/a57caa9a-24f8-47f7-b78e-5e453d6cc4d3" />
+
+<img width="671" height="390" alt="Снимок экрана 2025-10-08 в 22 01 57" src="https://github.com/user-attachments/assets/6a3fc9fc-3ff1-4cf2-9e77-8d3cd9a87541" />
+
+<h1>contacts.html</h1>
+<img width="670" height="625" alt="Снимок экрана 2025-10-08 в 22 02 35" src="https://github.com/user-attachments/assets/09a751c9-c26a-4bf9-b223-a407cc72e376" />
+
+<img width="669" height="438" alt="Снимок экрана 2025-10-08 в 22 03 44" src="https://github.com/user-attachments/assets/5238ee41-8831-41aa-b046-473551211c23" />
+
+<img width="671" height="632" alt="Снимок экрана 2025-10-08 в 22 04 05" src="https://github.com/user-attachments/assets/779ec6b7-1ab1-42e6-8d07-3a49bbe18ef4" />
+
+
+
