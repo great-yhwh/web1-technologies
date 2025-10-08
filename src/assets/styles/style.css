@@ -9,3 +9,38 @@
 .test {
     color: red !important;
 }
+
+.paragraph{
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+
+.header-one {
+    font-size: 64px;
+    color: #1F3F68;
+}
+
+.header-two{
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+}
+
+.header-three{
+    font-size: 36px;
+    text-align: center;
+}
+
+.header-four{
+    font-size: 36px;
+    text-align: center;
+}
+
+.form-input{
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+
+}
