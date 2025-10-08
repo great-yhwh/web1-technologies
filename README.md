@@ -1,6 +1,6 @@
 Репозиторий для WebИС-ЛБ-ПИ-20
-<body>
-<h1>Подключение шрифтов</h1>
+<h1>Работа с CSS</h1>
+<p>Подключение шрифтов</p>
 
 <ul>
     <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/@font-face">https://developer.mozilla.org/ru/docs/Web/CSS/@font-face</a></li>
@@ -88,8 +88,7 @@
 </ul>
   </li>
 </ol>
-</body>
-</html>
+
 
 <h1>index.html</h1>
 <img width="672" height="633" alt="Снимок экрана 2025-10-08 в 22 01 36" src="https://github.com/user-attachments/assets/a57caa9a-24f8-47f7-b78e-5e453d6cc4d3" />
