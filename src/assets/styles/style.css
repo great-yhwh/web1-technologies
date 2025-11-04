@@ -86,5 +86,285 @@ p.contacts {
     float: left;
 }
 
+div.description {
+    width:600px;
+    height:220px;
+    margin-top: 94px;
+    margin-left: 106px;
+}
 
+.header-txt {
 
+    font-size: 36px;
+    line-height: 51px;
+    font-weight: 700;
+}
+
+p.default-text {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.black-text {
+    color: black;
+}
+
+div.upper-feedback {
+    width: 676px;
+    height: 186px;
+    margin-top: 64px;
+    padding: 24px;
+    background-color: white;
+    margin-left: 108px;
+    border-radius: 12px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+    0 0 24px rgba(0, 0, 0, 0.16);
+}
+
+.subheader {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+form.feedback-form {
+    width: 628px;
+    height: 58px;
+    margin-top: 24px;
+}
+
+div.feedback-form-field {
+    width: 224px;
+    height: 54px;
+    float: left;
+}
+
+label.feedback-form-label {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(102, 112, 133, 1);
+}
+
+#book-phone {
+    padding-left: 22px;
+    margin-left: -1px;
+    width: 175px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+
+#feedback-name {
+    width: 200px;
+    height: 30px;
+    border: none;
+    margin-left: -2px;
+    padding-left: 2px;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+
+#feedback-image {
+    position: absolute;
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+}
+
+button.feedback-button {
+    width: 132px;
+    height: 58px;
+    border: none;
+    background-color: rgba(45, 102, 238, 1);
+    padding: 11px 24px;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+div.development {
+    height: 400px;
+    background-color: white;
+}
+
+div.development-technologies {
+    margin-left: 108px;
+    float: left;
+    width: 496px;
+    height: 200px;
+}
+div.development-categories {
+    margin-top: 40px;
+    margin-left: 40px;
+    float: left;
+    width:233px;
+    height: 340px;
+}
+
+ul.development-categories-list {
+    list-style-type: none;
+}
+
+li.development-categories-list-item {
+    height: 40px;
+}
+
+li.development-categories-list-item a {
+    color: black;
+    text-decoration: none;
+}
+
+div.projects {
+    width:1300px;
+    height: 350px;
+    margin-left: 106px;
+}
+
+div.project-list {
+    width: 1223px;
+    height: 280px;
+}
+
+.project-column1, .project-column2, .project-column3 {
+    float: left;
+    width: 391px;
+    height: 280px;
+}
+
+div.project-list-item {
+    margin-left: 60px;
+    width: 391px;
+    height: 44px;
+}
+
+img.project-list-item-image {
+    position: absolute;
+    margin-top: -15px;
+    margin-left: -65px;
+}
+
+div.clients-companies {
+    width: 1230px;
+    height: 700px;
+    margin-left: 106px;
+}
+
+div.clients-companies-list {
+    margin-top: 50px;
+    width: 1000px;
+    height: 58px;
+}
+
+ul.clients-list {
+    margin-left: 10px;
+    width: 740px;
+    height: 58px;
+    padding: 0;
+    display: inline-block;
+    list-style-type: none;
+}
+
+li.clients-list-item {
+    margin-right: 20px;
+    display: inline-block;
+    height: 58px;
+}
+
+li.clients-list-item a {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+button.clients-companies-button {
+    margin-top: 15px;
+    float: right;
+    width: 207px;
+    height: 40px;
+    border: none;
+    background-color: rgba(45, 102, 238, 1);
+    padding: 11px 24px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+div.clients-i-teka {
+    width: 600px;
+    height: 300px;
+}
+
+div.i-teka-info {
+    width: 316px;
+    height: 70px;
+}
+
+.i-teka-category, .users-growth, .users-active {
+    float: left;
+}
+
+img.i-teka-icon {
+    position: absolute;
+    margin-top: 15px;
+}
+
+p.i-teka-text{
+    margin-left: 25px;
+    margin-right: 21px;
+}
+
+div.users-growth {
+    padding: 0;
+    margin-right: 45px;
+}
+
+img.aside-image {
+    position: absolute;
+    margin-top: -260px;
+    margin-left: 400px;
+}
+
+p.users-txt{
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(102, 112, 133, 1);
+}
+
+img.clients-appstore {
+    float: left;
+    margin-right: 16px;
+}
+
+div.contact-form {
+    background-color:rgba(45, 102, 238, 1);
+    height: 300px;
+}
+
+div.contact-form-text {
+    margin-left: 108px;
+    float: left;
+    width:600px;
+    height: 168px;
+}
+
+.white-text {
+    color: white;
+}
+
+div.contact-form-left-form {
+    background-color: white;
+    width: 600px;
+    padding: 10px 20px;
+    height:190px;
+    float: left;
+    margin-top: 45px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+    0 0 24px rgba(0, 0, 0, 0.16);
+}
+
+form.contact-form-form {
+    width: 450px;
+    height: 58px;
+    margin-top: 24px;
+}

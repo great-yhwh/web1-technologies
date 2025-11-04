@@ -36,29 +36,29 @@
         </header>
 
 
-        <div>
-            <h1>
+        <div class="description">
+            <h1 class="header-txt">
                 Development of
-                <span>mobile applications</span> and
-                <span>web services</span> of any complexity
+                <span class="blue-text">mobile applications</span> and
+                <span class="blue-text">web services</span> of any complexity
             </h1>
 
-            <p>
+            <p class="default-text black-text">
                 We create mobile applications for iOS, Android that transfer your
                 business to mobile applications of your customers' devices
             </p>
         </div>
 
-        <div>
-            <h2>
+        <div class="upper-feedback">
+            <h2 class="subheader">
                 Leave your contacts and we will call you back<br />within 30 minutes
             </h2>
 
-            <form action="#" method="post" >
-                <div>
-                    <label for="book-phone">Phone number</label>
+            <form class="feedback-form" action="#" method="post" >
+                <div class="feedback-form-field">
+                    <label class="feedback-form-label" for="book-phone">Phone number</label>
                     <div>
-                        <img src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
+                        <img id="feedback-image" src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
 
                         <input
                                 type="tel"
@@ -70,8 +70,8 @@
                     </div>
                 </div>
 
-                <div>
-                    <label for='feedback-name'>Full name</label>
+                <div class="feedback-form-field">
+                    <label class="feedback-form-label" for='feedback-name'>Full name</label>
 
                     <input
                             type="text"
@@ -83,224 +83,226 @@
                 </div>
             </form>
 
-            <button>Get consultation</button>
+            <button class="feedback-button">Get consultation</button>
         </div>
 
-        <hr/>
+        <hr />
 
-        <div>
-            <div>
-                <h2>Full development cycle</h2>
+        <div class="development">
+            <div class="development-technologies">
+                <h2 class="header-txt">Full development cycle</h2>
 
-                <p>We use proven technologies</p>
+                <p class="default-text black-text">We use proven technologies</p>
 
-                <h3>Web</h3>
+                <h3 class="subheader">Web</h3>
 
-                <p>
+                <p class="default-text black-text">
                     PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js/ Nuxt /
                     MySQL / Laravel / GO lang / django / Python
                 </p>
 
-                <h3>Mobile</h3>
-                <p>
+                <h3 class="subheader">Mobile</h3>
+                <p class="default-text black-text">
                     Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm /
                     Coroutine / RxJava / RxSwift / Unit Test / Navigation
                 </p>
             </div>
 
-            <div>
-                <ul>
-                    <li><a href="#">IOS development</a></li>
-                    <li><a href="#">Android development</a></li>
-                    <li><a href="#">Web development</a></li>
-                    <li><a href="#">UI/UX design</a></li>
-                    <li><a href="#">Testing</a></li>
-                    <li><a href="#">Launch</a></li>
-                    <li><a href="#">IT consulting</a></li>
+            <div class="development-categories">
+                <ul class="development-categories-list">
+                    <li class="development-categories-list-item"><a href="#">IOS development</a></li>
+                    <li class="development-categories-list-item"><a href="#">Android development</a></li>
+                    <li class="development-categories-list-item"><a href="#">Web development</a></li>
+                    <li class="development-categories-list-item"><a href="#">UI/UX design</a></li>
+                    <li class="development-categories-list-item"><a href="#">Testing</a></li>
+                    <li class="development-categories-list-item"><a href="#">Launch</a></li>
+                    <li class="development-categories-list-item"><a href="#">IT consulting</a></li>
                 </ul>
             </div>
         </div>
 
         <hr/>
-        <div>
-            <h2>
-                Developed more than <span>100</span> projects in
-                <span class="text-color-blue">15</span> industries
+        <div class="projects">
+            <h2 class="header-txt">
+                Developed more than <span class="blue-text">100</span> projects in
+                <span class="blue-text">15</span> industries
             </h2>
 
-            <div>
+            <div class="project-list">
 <!--                Первый столбец-->
-                <div>
-                    <div>
-                        <img src="./assets/icons/social_media.svg"  alt="SocialMedia"/>
+                <div class="project-column1">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/social_media.svg"  alt="SocialMedia"/>
                         <p>Social media</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/fitness.svg" alt="Fitness">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/fitness.svg" alt="Fitness">
                         <p>Fitness and sport</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/bank.svg" alt="Bank"/>
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/bank.svg" alt="Bank"/>
                         <p>Bank</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/construction.svg" alt="Construction">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/construction.svg" alt="Construction">
                         <p>Construction</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/game_projects.svg" alt=""/>
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/game_projects.svg" alt=""/>
                         <p>Game projects</p>
                     </div>
                 </div>
 <!--                Второй столбец-->
-                <div>
-                    <div>
-                        <img src="./assets/icons/education.svg" alt="Education">
+                <div class="project-column2">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/education.svg" alt="Education">
                         <p>Education</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/auto.svg" alt="Auto">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/auto.svg" alt="Auto">
                         <p>Auto, transport</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/medicine.svg" alt="Medicine">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/medicine.svg" alt="Medicine">
                         <p>Medicine, health</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/restaurant.svg" alt="Restaurants">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/restaurant.svg" alt="Restaurants">
                         <p>Restaurants, food delivery</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/marketplace.svg" alt="Marketplaces">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/marketplace.svg" alt="Marketplaces">
                         <p>Marketplaces</p>
                     </div>
                 </div>
 <!--                Третий столбец-->
-                <div>
-                    <div>
-                        <img src="./assets/icons/ar.svg" alt="AR">
+                <div class="project-column3">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/ar.svg" alt="AR">
                         <p>AR technologies</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/tv.svg" alt="TV">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/tv.svg" alt="TV">
                         <p>TV series</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/startups.svg" alt="Startups">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/startups.svg" alt="Startups">
                         <p>Startups</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/religion.svg" alt="Religion">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/religion.svg" alt="Religion">
                         <p>Religion</p>
                     </div>
 
-                    <div>
-                        <img src="./assets/icons/online.svg" alt="Online">
+                    <div class="project-list-item">
+                        <img class="project-list-item-image" src="./assets/icons/online.svg" alt="Online">
                         <p>Online cources</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h2>Projects we are proud of</h2>
-            <p>
+        <div class="clients-companies">
+            <h2 class="header-txt">Projects we are proud of</h2>
+            <p class="default-text black-text">
                 Our software development company is truly proud of the wonderful clients
                 we have<br />worked with. We enjoy a long-term partnership
             </p>
 
-            <div>
+            <div class="clients-companies-list">
 <!--                Client list-->
-                <ul>
+                <ul class="clients-list">
 <!--                    Client item-->
-                    <li><a href="#">I-teka</a></li>
-                    <li><a href="#">Dauletten</a></li>
-                    <li><a href="#">Guru Bosch</a></li>
-                    <li><a href="#">Santo</a></li>
-                    <li><a href="#">Home Credit Bank</a></li>
-                    <li><a href="#">BI Partners</a></li>
-                    <li><a href="#">Europharma</a></li>
+                    <li class="clients-list-item black-text"><a href="#">I-teka</a></li>
+                    <li class="clients-list-item black-text"><a href="#">Dauletten</a></li>
+                    <li class="clients-list-item black-text"><a href="#">Guru Bosch</a></li>
+                    <li class="clients-list-item black-text"><a href="#">Santo</a></li>
+                    <li class="clients-list-item black-text"><a href="#">Home Credit Bank</a></li>
+                    <li class="clients-list-item black-text"><a href="#">BI Partners</a></li>
+                    <li class="clients-list-item black-text"><a href="#">Europharma</a></li>
                 </ul>
-                <button>
+                <button class="clients-companies-button white-text">
                     View 100 more projects
                 </button>
             </div>
 <!--            Clients i-teka-->
-            <div>
-                <h2>I-teka</h2>
-                <p>
+            <div class="clients-i-teka">
+                <h2 class="header-txt">I-teka</h2>
+                <p class="default-text black-text">
                     The application is designed to search for drugs by availability in
                     pharmacies in cities. During quarantine, the application helped many
                     people,<br />which gives more value.
                 </p>
             </div>
 
-            <p>
+            <p class="default-text black-text">
                 Business analysis / iOS / Android / QA / UI/UX Design
             </p>
 <!--            Метка геопозиции и медицина-->
-            <div>
+            <div class="i-teka-info">
 <!--                Сами категории-->
-                <div>
+                <div class="i-teka-category">
 <!--                    Иконка-->
                     <img
+                            class="i-teka-icon"
                             src="./assets/icons/IconGeo.svg"
                             alt="GeoPosition"
                     />
  <!--                    Текст-->
-                    <p>Kazakhstan</p>
+                    <p class="default-text black-texti-teka-text">Kazakhstan</p>
                 </div>
                 <div class="iteka-category">
 <!--                    Иконка-->
                     <img
+                            class="i-teka-icon"
                             src="./assets/icons/IconCase.svg"
                             alt="SuitCase"
                     />
 <!--                    Текст-->
-                    <p>Medicine</p>
+                    <p class="default-text black-text i-teka-text">Medicine</p>
                 </div>
 <!--                Пользователь выросло-->
-                <div>
-                    <h3>400%</h3>
-                    <p>User Growth</p>
+                <div class="users-growth">
+                    <h3 class="subheader">400%</h3>
+                    <p class="users-txt">User Growth</p>
                 </div>
 <!--                Активность пользователей-->
-                <div>
-                    <h3>+ 200 000</h3>
-                    <p>Active Users</p>
+                <div class="users-active">
+                    <h3 class="subheader">+ 200 000</h3>
+                    <p class="users-txt">Active Users</p>
                 </div>
-                <img src="./assets/img/AppStore.png" alt="AppStore" />
-                <img src="./assets/img/GooglePlay.png" alt="GooglePlay" />
+                <img class="clients-appstore" src="./assets/img/AppStore.png" alt="AppStore" />
+                <img class="clients-appstore" src="./assets/img/GooglePlay.png" alt="GooglePlay" />
             </div>
-            <img src="/src/assets/img/i-teka.png" alt="i-teka"/>
+            <img class="aside-image" src="/src/assets/img/i-teka.png" alt="i-teka"/>
         </div>
 
         <hr/>
 <!--        Contact form-->
-        <div>
-            <div>
-                <h3>
+        <div class="contact-form">
+            <div class="contact-form-text">
+                <h3 class="header-txt white-text">
                     Let's discuss<br />Your project
                 </h3>
-                <p>
+                <p class="default-text white-text">
                     Let's figure out how to create an effective application,<br />its cost
                     and terms of its development
                 </p>
             </div>
-            <div>
+            <div class="contact-form-left-form">
 <!--                Contact form-->
-                <form action="" method="post">
+                <form class="contact-form-form" action="" method="post">
 <!--                    Feedback-->
                     <div>
                         <label for="feedback__phone">Best phone number</label>
