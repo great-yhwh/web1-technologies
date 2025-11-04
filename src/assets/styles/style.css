@@ -2,10 +2,89 @@
 @import "./fonts.css";
 @import "./utils.css";
 
-.test {
-    color: yellow !important;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(235, 236, 237);
+    width: 1440px;
+    height: 6024px;
 }
 
-.test {
-    color: red !important;
+header.site-header {
+    background-color: white;
+    margin-top: 20px;
+    padding: 16px 24px;
+    height: auto;
+    width: 1124px;
+    margin-left: 108px;
+    border-radius: 12px;
+    display: flex;
 }
+
+a.site-logo {
+    float: left;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.blue-text {
+    color: rgba(45, 102, 238, 1)
+}
+
+nav.body-header-nav {
+    float: left;
+    margin-left: 40px;
+}
+
+ul.body-header-nav-menu {
+    margin-top: 0;
+    list-style-type: none;
+}
+
+li.body-header-nav-menu-item {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+div.header-contacts {
+    height: 24px;
+    width: 472px;
+    margin-left: 80px;
+    float: left;
+    font-size: 14px;
+}
+
+div.contact-phone {
+    float: left;
+    width: 266px;
+    height: 24px;
+}
+
+img.contact-email{
+    width: 174px;
+    height: 24px;
+}
+
+img.icon-email {
+    float: left;
+    margin-top: 2px;
+    margin-left: 32px;
+    height: 16px;
+    width: 20px
+}
+
+img.icon-phone {
+    float: left;
+    height: 20px;
+    width: 20px
+}
+
+p.contacts {
+    margin-left: 8px;
+    margin-top: 0;
+    float: left;
+}
+
+
+
