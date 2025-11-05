@@ -10,8 +10,31 @@ body {
     height: 6024px;
 }
 
-header.site-header {
+.text-blue {
+    color: rgba(45, 102, 238, 1)
+}
+
+.text-black {
+    color: black;
+}
+
+.text-black  a{
+    color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.background-white {
     background-color: white;
+}
+
+.background-blue {
+    background-color: rgba(45, 102, 238, 1);
+}
+
+header.site-header {
     margin-top: 20px;
     padding: 16px 24px;
     height: auto;
@@ -26,10 +49,6 @@ a.site-logo {
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
-}
-
-.blue-text {
-    color: rgba(45, 102, 238, 1)
 }
 
 nav.body-header-nav {
@@ -106,16 +125,11 @@ p.default-text {
     font-weight: 500;
 }
 
-.black-text {
-    color: black;
-}
-
 div.upper-feedback {
     width: 676px;
     height: 186px;
     margin-top: 64px;
     padding: 24px;
-    background-color: white;
     margin-left: 108px;
     border-radius: 12px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
@@ -166,7 +180,7 @@ label.feedback-form-label {
 
 #feedback-image {
     position: absolute;
-    margin-top: 6px;
+    margin-top: 15px;
     width: 20px;
     height: 20px;
 }
@@ -175,9 +189,7 @@ button.feedback-button {
     width: 132px;
     height: 58px;
     border: none;
-    background-color: rgba(45, 102, 238, 1);
     padding: 11px 24px;
-    color: white;
     text-align: left;
     cursor: pointer;
     border-radius: 8px;
@@ -185,7 +197,6 @@ button.feedback-button {
 
 div.development {
     height: 400px;
-    background-color: white;
 }
 
 div.development-technologies {
@@ -211,7 +222,6 @@ li.development-categories-list-item {
 }
 
 li.development-categories-list-item a {
-    color: black;
     text-decoration: none;
 }
 
@@ -282,7 +292,6 @@ button.clients-companies-button {
     width: 207px;
     height: 40px;
     border: none;
-    background-color: rgba(45, 102, 238, 1);
     padding: 11px 24px;
     text-align: center;
     cursor: pointer;
@@ -318,12 +327,6 @@ div.users-growth {
     margin-right: 45px;
 }
 
-img.aside-image {
-    position: absolute;
-    margin-top: -260px;
-    margin-left: 400px;
-}
-
 p.users-txt{
     font-weight: 500;
     font-size: 13px;
@@ -335,8 +338,13 @@ img.clients-appstore {
     margin-right: 16px;
 }
 
+img.aside-image {
+    position: absolute;
+    margin-top: -260px;
+    margin-left: 400px;
+}
+
 div.contact-form {
-    background-color:rgba(45, 102, 238, 1);
     height: 300px;
 }
 
@@ -347,12 +355,7 @@ div.contact-form-text {
     height: 168px;
 }
 
-.white-text {
-    color: white;
-}
-
 div.contact-form-left-form {
-    background-color: white;
     width: 600px;
     padding: 10px 20px;
     height:190px;
@@ -367,4 +370,274 @@ form.contact-form-form {
     width: 450px;
     height: 58px;
     margin-top: 24px;
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 100px; /* Расстояние между полями */
+}
+
+.contact__form {
+    width: 450px;
+    height: 58px;
+    flex: 1;
+}
+
+.contact__button {
+    margin-top: 40px;
+    float: right;
+    width: 178px;
+    height: 40px;
+    border: none;
+    padding: 9px 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: -100px; /* Добавьте это */
+}
+
+#feedback__name {
+    width: 200px;
+    height: 30px;
+    border: none;
+    margin-left: -1px;
+    padding-left: 22px;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+
+#feedback__phone {
+    padding-left: 22px;
+    margin-left: -1px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+
+
+#feedback_image {
+    position: absolute;
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+}
+
+div.application-development-stages {
+    height:810px;
+    background-color: white;
+}
+
+div.application-development-stages-text{
+    margin-left: 108px;
+    padding-top: 10px;
+}
+
+.stage-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 55px;
+}
+
+div.application-development-stage-item {
+    margin-left: 108px;
+    width: 392px;
+    height: 172px;
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+    0 0 24px rgba(0, 0, 0, 0.16);
+}
+
+img.stage-image {
+    position: absolute;
+    margin-top: -60px;
+}
+
+div.left-column {
+    margin-right: 250px;
+}
+
+div.company-about {
+    width:1250px;
+    height: 500px;
+    margin-left: 106px;
+}
+
+div.company-text {
+    width: 600px;
+    height: 341px;
+    float: left;
+}
+
+div.company-stats {
+    width:200px;
+    float: left;
+}
+
+div.company-video {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+img.video-button {
+    position: absolute;
+    margin-top: 166px;
+    margin-left: -331.5px;
+}
+
+div.book-recommendation {
+    height:588px;
+}
+
+div.book-recommendation-text{
+    margin-left: 108px;
+    padding-top: 10px;
+}
+
+form.book-recommendation-form {
+    margin-left: 108px;
+    width: 520px;
+    height: 184px;
+    background-color: white;
+    padding: 20px;
+    float: left;
+    border-radius: 12px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+    0 0 24px rgba(0, 0, 0, 0.16);
+}
+
+div.book-recommendation-image {
+    margin-left: 200px;
+    margin-top: -140px;
+    float: left;
+}
+
+.book-image img {
+    width:200px;
+    height: 420px;
+}
+
+#feedback-phone {
+    padding-left: 22px;
+    margin-left: -1px;
+    width: 175px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+
+#book-name {
+    width: 200px;
+    height: 30px;
+    border: none;
+    margin-left: -2px;
+    padding-left: 2px;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+#feedback-email{
+    width: 425px;
+    border: none;
+    margin-left: -2px;
+    padding-left: 2px;
+    border-bottom: 1px solid rgba(208, 213, 221, 1);
+}
+
+button.book-button {
+    margin-top: 80px;
+    width: 225px;
+    height: 40px;
+    float: right;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+div.faq {
+    height:350px;
+    background-color: white;
+}
+
+div.faq-text{
+    padding-top: 10px;
+    margin-left: 108px;
+}
+
+div.faq-questions {
+    margin-left: 108px;
+    height: 420px;
+}
+
+div.question {
+    margin-right: 20px;
+    width:600px;
+    height:84px;
+    float: left;
+    border-top: 0.5px solid rgba(208, 213, 221, 1);
+}
+
+.faq-image {
+    position: absolute;
+    margin-top: -70px;
+    margin-left: 535px;
+}
+
+.border-bottom {
+    border-bottom: 0.5px solid rgba(208, 213, 221, 1);
+}
+
+footer.footer {
+    margin-left: 108px;
+    width: 1224px;
+    height: 222px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(15, 23, 39);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+div.footer-main {
+    width: 1200px;
+    height: 400px;
+}
+
+img.footer-icon {
+    position: absolute;
+    margin-top: 12px;
+}
+
+.icon-grayscale {
+    filter: grayscale(90%) brightness(160%);
+}
+
+.footer-text {
+    margin-left: 25px;
+}
+
+.footer-map {
+    position: absolute;
+    margin-left:-130px;
+    margin-top: 16px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 80px;
+    width:1200px;
+}
+
+.footer-item {
+    padding-left: 20px;
+    float: left;
+    width:280px;
+    height:60px;
 }
