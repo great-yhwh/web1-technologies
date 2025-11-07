@@ -35,56 +35,58 @@
             </div>
         </header>
 
+        <div class="description-upper-form">
+            <div class="description">
+                <h1 class="header-txt">
+                    Development of
+                    <span class="text-blue">mobile applications</span> and
+                    <span class="text-blue">web services</span> of any complexity
+                </h1>
 
-        <div class="description">
-            <h1 class="header-txt">
-                Development of
-                <span class="text-blue">mobile applications</span> and
-                <span class="text-blue">web services</span> of any complexity
-            </h1>
+                <p class="default-text text-black">
+                    We create mobile applications for iOS, Android that transfer your
+                    business to mobile applications of your customers' devices
+                </p>
+            </div>
 
-            <p class="default-text text-black">
-                We create mobile applications for iOS, Android that transfer your
-                business to mobile applications of your customers' devices
-            </p>
-        </div>
+            <div class="upper-feedback background-white">
+                <h2 class="subheader">
+                    Leave your contacts and we will call you back<br />within 30 minutes
+                </h2>
 
-        <div class="upper-feedback background-white">
-            <h2 class="subheader">
-                Leave your contacts and we will call you back<br />within 30 minutes
-            </h2>
+                <form class="feedback-form" action="#" method="post" >
+                    <div class="feedback-form-field">
+                        <label class="feedback-form-label" for="book-phone">Phone number</label>
+                        <div>
+                            <img id="feedback-image" src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
 
-            <form class="feedback-form" action="#" method="post" >
-                <div class="feedback-form-field">
-                    <label class="feedback-form-label" for="book-phone">Phone number</label>
-                    <div>
-                        <img id="feedback-image" src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
+                            <input
+                                    type="tel"
+                                    id="book-phone"
+                                    name="feedback-phone"
+                                    placeholder="+7 (111) 111-11-11"
+                                    required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="feedback-form-field">
+                        <label class="feedback-form-label" for='feedback-name'>Full name</label>
 
                         <input
-                                type="tel"
-                                id="book-phone"
-                                name="feedback-phone"
-                                placeholder="+7 (111) 111-11-11"
+                                type="text"
+                                id='feedback-name'
+                                name="feedback-name"
+                                placeholder="Иван Иванов"
                                 required
                         />
                     </div>
-                </div>
 
-                <div class="feedback-form-field">
-                    <label class="feedback-form-label" for='feedback-name'>Full name</label>
-
-                    <input
-                            type="text"
-                            id='feedback-name'
-                            name="feedback-name"
-                            placeholder="Иван Иванов"
-                            required
-                    />
-                </div>
-            </form>
-
-            <button class="feedback-button text-white background-blue">Get consultation</button>
+                    <button class="feedback-button text-white background-blue">Get consultation</button>
+                </form>
+            </div>
         </div>
+
 
         <hr />
 
@@ -320,7 +322,7 @@
                                         type="tel"
                                         id="feedback__phone"
                                         name="feedback__phone"
-                                        placeholder="+7 (111) 111-11-11"
+                                        placeholder="+7 (702) 517-11-98"
                                         required
                                 />
                             </div>
@@ -352,7 +354,7 @@
                 <h3 class="header-txt">Application Development Stages</h3>
             </div>
 <!--            Левая часть-->
-            <div class="application-development-stage-item left-column">
+            <div class="application-development-stage-item left-column" data-number="1">
                 <h4 class="stage-header">Analysis</h4>
                 <img class="stage-image" src="./assets/icons/planing.svg" alt="Analysis">
                 <p class="default-text">
@@ -363,7 +365,7 @@
                 </p>
             </div>
             <!--            Правая часть-->
-            <div class="application-development-stage-item">
+            <div class="application-development-stage-item" data-number="4">
                 <h4 class="stage-header">Testing</h4>
                 <img class="stage-image"  src="./assets/icons/security.svg" alt="Testing">
                 <p class="default-text">
@@ -373,7 +375,7 @@
                 </p>
             </div>
             <!--            Левая часть-->
-            <div class="application-development-stage-item left-column">
+            <div class="application-development-stage-item left-column" data-number="2">
                 <h4 class="stage-header">Design</h4>
                 <img class="stage-image" src="./assets/icons/graphic_design.svg" alt="Design">
                 <p class="default-text">
@@ -383,7 +385,7 @@
                 </p>
             </div>
             <!--            Правая часть-->
-            <div class="application-development-stage-item">
+            <div class="application-development-stage-item" data-number="5">
                 <h4 class="stage-header">Launching</h4>
                 <img class="stage-image"  src="./assets/icons/hosting.svg" alt="Launching">
                 <p class="default-text">
@@ -393,7 +395,7 @@
             </div>
             <!--            Левая часть-->
 
-            <div class="application-development-stage-item left-column">
+            <div class="application-development-stage-item left-column" data-number="3">
                 <h4 class="stage-header">Development</h4>
                 <img class="stage-image"  src="./assets/icons/computer_coding.svg" alt="Development">
                 <p class="default-text">
@@ -403,7 +405,7 @@
                 </p>
             </div>
 <!--            Правая часть-->
-            <div class="application-development-stage-item">
+            <div class="application-development-stage-item" data-number="6">
                 <h4 class="stage-header">Support</h4>
                 <img class="stage-image"  src="./assets/icons/application.svg" alt="Support">
                 <p class="default-text">
@@ -458,7 +460,7 @@
                 <h3 class="header-txt text-white">Get the book for free by leaving<br/>your contacts</h3>
             </div>
             <div>
-                <form class="book-recommendation-form" action="">
+                <form class="book-recommendation-form background-white" action="">
                     <div class="feedback-form-field">
                         <label class="feedback-form-label" for="feedback-phone">
                             Phone number
@@ -518,13 +520,13 @@
 
         <hr/>
 
-        <div class="faq">
+        <div class="faq background-white">
             <div class="faq-text">
                 <h3 class="header-txt">FAQ</h3>
             </div>
             <div class="faq-questions">
                 <div class="question border-bottom">
-                    <h4 class="stage-header">
+                    <h4 class="footer-header">
                         What is the cost of a mobile application?
                     </h4>
                     <img
@@ -535,7 +537,7 @@
                 </div>
 
                 <div class="question border-bottom">
-                    <h4 class="stage-header">How long will development take?</h4>
+                    <h4 class="footer-header">How long will development take?</h4>
                     <img
                             class="faq-image"
                             src="./assets/icons/IconPlus.svg"
@@ -544,7 +546,7 @@
                 </div>
 
                 <div class="question border-bottom">
-                    <h4 class="stage-header">
+                    <h4 class="footer-header">
                         Do you provide a guarantee for the mobile application?
                     </h4>
                     <img
@@ -555,7 +557,7 @@
                 </div>
 
                 <div class="question border-bottom">
-                    <h4 class="stage-header">
+                    <h4 class="footer-header">
                         I will not tell my idea, do you guarantee confidentiality?
                     </h4>
                     <img
