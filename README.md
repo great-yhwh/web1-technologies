@@ -42,5 +42,7 @@
 
 <img width="593" height="521" alt="Снимок экрана 2025-11-11 в 01 23 48" src="https://github.com/user-attachments/assets/069448dd-b531-430c-9930-8a1d2d8838da" />
 
-
+<h2>Стили</h2>
+<p>Здесь не хватает картинки</p>
+<img width="1276" height="656" alt="Снимок экрана 2025-11-11 в 01 28 39" src="https://github.com/user-attachments/assets/b810f049-afb0-479b-a03e-bd4162ea2df1" />
 
