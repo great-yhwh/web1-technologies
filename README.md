@@ -46,3 +46,21 @@
 <p>Здесь не хватает картинки</p>
 <img width="1276" height="656" alt="Снимок экрана 2025-11-11 в 01 28 39" src="https://github.com/user-attachments/assets/b810f049-afb0-479b-a03e-bd4162ea2df1" />
 
+<img width="1314" height="421" alt="Снимок экрана 2025-11-11 в 01 48 27" src="https://github.com/user-attachments/assets/f34b2b0e-e056-4914-a3b5-785b2fca4c6a" />
+
+
+<img width="1227" height="407" alt="Снимок экрана 2025-11-11 в 01 49 01" src="https://github.com/user-attachments/assets/c5033caf-30f3-42f2-85fa-7eb619c5f9d0" />
+
+<img width="1275" height="657" alt="Снимок экрана 2025-11-11 в 01 49 22" src="https://github.com/user-attachments/assets/b37f8b58-6452-4195-8cb4-3ba52032bd6f" />
+
+<img width="1404" height="312" alt="Снимок экрана 2025-11-11 в 01 49 40" src="https://github.com/user-attachments/assets/99023564-7184-476d-842a-a9cdf782e128" />
+
+<img width="1212" height="681" alt="Снимок экрана 2025-11-11 в 01 50 31" src="https://github.com/user-attachments/assets/27495c5f-89cf-479f-8870-1c9adbb31892" />
+
+<img width="1280" height="551" alt="Снимок экрана 2025-11-11 в 01 50 50" src="https://github.com/user-attachments/assets/b97c09c3-3779-465f-b22f-081050bed2e3" />
+
+<p>Форма по высоте чуть-чуть меньше</p>
+
+<img width="1196" height="591" alt="Снимок экрана 2025-11-11 в 01 51 08" src="https://github.com/user-attachments/assets/b75c7bce-6c2b-4dd4-9bf2-32d8c57de494" />
+
+<img width="1367" height="616" alt="Снимок экрана 2025-11-11 в 01 53 00" src="https://github.com/user-attachments/assets/d9048ee3-56fb-416c-9a1b-8b4ecab4e4ae" />
