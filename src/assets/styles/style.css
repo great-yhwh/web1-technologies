@@ -168,7 +168,6 @@ form.feedback-form {
 div.feedback-form-field {
     width: 224px;
     height: 54px;
-    margin-top: 20px;
     float: left;
 }
 
@@ -563,6 +562,13 @@ div.book-recommendation-image {
     width:200px;
     height: 420px;
 }
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
 
 #feedback-phone {
     width: 175px;
@@ -598,7 +604,7 @@ div.book-recommendation-image {
 }
 
 button.book-button {
-    margin-top: 100px;
+    margin-top: 110px;
     width: 225px;
     height: 40px;
     float: right;
