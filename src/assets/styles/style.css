@@ -34,14 +34,27 @@ body {
     background-color: rgba(45, 102, 238, 1);
 }
 
+.box-shadow-black {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+    0 0 24px rgba(0, 0, 0, 0.16);
+}
+
 header.site-header {
-    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    height: 60px;
     padding: 16px 24px;
-    height: auto;
-    width: 1124px;
-    margin-left: 108px;
-    border-radius: 12px;
+    border-radius: 12px 12px 12px 12px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 a.site-logo {
@@ -53,7 +66,7 @@ a.site-logo {
 
 nav.body-header-nav {
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 ul.body-header-nav-menu {
@@ -63,6 +76,7 @@ ul.body-header-nav-menu {
 
 li.body-header-nav-menu-item {
     display: inline-block;
+    margin-top: 10px;
     margin-left: 12px;
 }
 
@@ -111,7 +125,7 @@ div.description-upper-form {
 div.description {
     width:600px;
     height:220px;
-    margin-top: 94px;
+    margin-top: 140px;
     margin-left: 106px;
 }
 
@@ -135,8 +149,6 @@ div.upper-feedback {
     padding: 24px;
     margin-left: 108px;
     border-radius: 12px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
-    0 0 24px rgba(0, 0, 0, 0.16);
 }
 
 .subheader {
@@ -156,6 +168,7 @@ form.feedback-form {
 div.feedback-form-field {
     width: 224px;
     height: 54px;
+    margin-top: 20px;
     float: left;
 }
 
@@ -172,6 +185,7 @@ label.feedback-form-label {
     height: 30px;
     border: none;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 
 #feedback-name {
@@ -181,6 +195,7 @@ label.feedback-form-label {
     margin-left: -2px;
     padding-left: 2px;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 
 #book-phone::placeholder,
@@ -238,7 +253,7 @@ li.development-categories-list-item a {
 
 div.projects {
     width:1300px;
-    height: 350px;
+    height: 450px;
     margin-left: 106px;
 }
 
@@ -373,8 +388,6 @@ div.contact-form-right-form {
     float: left;
     margin-top: 45px;
     border-radius: 8px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
-    0 0 24px rgba(0, 0, 0, 0.16);
 }
 
 form.contact-form-form {
@@ -403,7 +416,7 @@ form.contact-form-form {
     text-align: center;
     cursor: pointer;
     border-radius: 8px;
-    margin-right: -140px; /* Добавьте это */
+    margin-right: -140px;
 }
 
 #feedback__name {
@@ -413,6 +426,7 @@ form.contact-form-form {
     margin-left: -1px;
     padding-left: 22px;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 
 #feedback__phone {
@@ -422,6 +436,7 @@ form.contact-form-form {
     height: 30px;
     border: none;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 
 #feedback__phone::placeholder,
@@ -463,9 +478,6 @@ div.application-development-stages-text{
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 12px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
-    0 0 24px rgba(0, 0, 0, 0.16);
-
     position: relative;
     overflow: hidden;
 }
@@ -495,7 +507,7 @@ div.left-column {
 }
 
 div.company-about {
-    width:1250px;
+    width: 1250px;
     height: 500px;
     margin-left: 106px;
 }
@@ -534,12 +546,10 @@ div.book-recommendation-text{
 form.book-recommendation-form {
     margin-left: 108px;
     width: 520px;
-    height: 184px;
+    height: 220px;
     padding: 20px;
     float: left;
     border-radius: 12px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
-    0 0 24px rgba(0, 0, 0, 0.16);
 }
 
 
@@ -557,25 +567,27 @@ div.book-recommendation-image {
 #feedback-phone {
     width: 175px;
     height: 30px;
-
     border: none;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 
 #book-name {
-    width: 200px;
+    width: 295px;
     height: 30px;
     border: none;
     margin-left: -2px;
     padding-left: 2px;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 #feedback-email{
-    width: 425px;
+    width: 520px;
     border: none;
     margin-left: -2px;
     padding-left: 2px;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
 }
 
 #feedback-phone::placeholder,
@@ -586,7 +598,7 @@ div.book-recommendation-image {
 }
 
 button.book-button {
-    margin-top: 80px;
+    margin-top: 100px;
     width: 225px;
     height: 40px;
     float: right;
@@ -628,8 +640,6 @@ div.question {
 }
 
 footer.footer {
-    margin-left: 108px;
-    width: 1224px;
     height: 222px;
     border-radius: 8px;
     padding: 20px;
@@ -637,6 +647,7 @@ footer.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: auto;
 }
 
 .logo {
