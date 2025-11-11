@@ -1,632 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-                name="viewport"
-                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
-        <link rel="stylesheet" href="/src/assets/styles/style.css">
-    </head>
-    <body>
-        <header class="site-header background-white">
-            <a class="site-logo text-blue" href="#">IT WEBSITE</a>
-            <nav class="body-header-nav">
-                <ul class="body-header-nav-menu">
-                    <li class="body-header-nav-menu-item"><a>Service</a></li>
-                    <li class="body-header-nav-menu-item"><a>Media</a></li>
-                    <li class="body-header-nav-menu-item"><a>Cases</a></li>
-                    <li class="body-header-nav-menu-item"><a>FAQ</a></li>
-                    <li class="body-header-nav-menu-item"><a>Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="header-contacts">
-                <div class="contact-phone">
-                    <img class="icon-phone" src="/src/assets/icons/IconPhone.svg" alt="IconPhone"/>
-                    <p class="contacts text-blue">+7 (111) 111 11 11</p>
-                    <p class="contacts text-blue">+7 (111) 111 11 11</p>
-                </div>
-                <div class="contact-email">
-                    <img class="icon-email" src="/src/assets/icons/IconEmail.svg" alt="IconEmail"/>
-                    <p class="contacts text-blue">itcompany@mail.com</p>
-                </div>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Website</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+<!-- Хэдер -->
+<header class="site-header background-white">
+    <!-- Меню для не десктопных версий -->
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+    <label for="mobile-menu-toggle" class="mobile-menu-button">
+        <img src="./assets/img/menu.png" alt="Menu" class="menu-icon">
+        <img src="./assets/img/close.png" alt="Close" class="close-icon">
+    </label>
 
-<!--                        Основная часть-->
+    <a class="site-logo text-blue" href="#">IT WEBSITE</a>
 
-        <div class="description-upper-form">
-            <div class="description">
-                <h1 class="header-txt">
-                    Development of
-                    <span class="text-blue">mobile applications</span> and
-                    <span class="text-blue">web services</span> of any complexity
-                </h1>
+    <nav class="body-header-nav">
+        <ul class="body-header-nav-menu">
+            <li class="body-header-nav-menu-item"><a>Service</a></li>
+            <li class="body-header-nav-menu-item"><a>Media</a></li>
+            <li class="body-header-nav-menu-item"><a>Cases</a></li>
+            <li class="body-header-nav-menu-item"><a>FAQ</a></li>
+            <li class="body-header-nav-menu-item"><a>Contacts</a></li>
+        </ul>
+    </nav>
 
-                <p class="default-text text-black">
-                    We create mobile applications for iOS, Android that transfer your
-                    business to mobile applications of your customers' devices
-                </p>
-            </div>
-
-            <div class="upper-feedback box-shadow-black background-white">
-                <h2 class="subheader">
-                    Leave your contacts and we will call you back<br />within 30 minutes
-                </h2>
-
-                <form class="feedback-form" action="#" method="post" >
-                    <div class="feedback-form-field">
-                        <label class="feedback-form-label" for="book-phone">Phone number</label>
-                        <div>
-                            <img id="feedback-image" src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
-
-                            <input
-                                    type="tel"
-                                    id="book-phone"
-                                    name="feedback-phone"
-                                    placeholder="+7 (111) 111-11-11"
-                                    required
-                            />
-                        </div>
-                    </div>
-
-                    <div class="feedback-form-field">
-                        <label class="feedback-form-label" for='feedback-name'>Full name</label>
-
-                        <input
-                                type="text"
-                                id='feedback-name'
-                                name="feedback-name"
-                                placeholder="Иван Иванов"
-                                required
-                        />
-                    </div>
-
-                    <button class="feedback-button text-white background-blue">Get consultation</button>
-                </form>
-            </div>
+    <div class="header-contacts">
+        <div class="contact-phone">
+            <img class="icon-phone" src="/src/assets/icons/IconPhone.svg" alt="IconPhone"/>
+            <p class="contacts text-blue">+7 (111) 111 11 11</p>
+            <p class="contacts text-blue">+7 (111) 111 11 11</p>
         </div>
-
-        <hr />
-
-        <div class="development background-white">
-            <div class="development-technologies">
-                <h2 class="header-txt">Full development cycle</h2>
-
-                <p class="default-text text-black">We use proven technologies</p>
-
-                <h3 class="subheader">Web</h3>
-
-                <p class="default-text text-black">
-                    PHP <span class="text-blue">/</span> Javascript <span class="text-blue">/</span>
-                    Node.JS <span class="text-blue">/</span> Web Socket <span class="text-blue">/</span>
-                    Socket.io <span class="text-blue">/</span> Vue.js <span class="text-blue">/</span>
-                    Nuxt <span class="text-blue">/</span> MySQL <span class="text-blue">/</span>
-                    Laravel <span class="text-blue">/</span> GO lang <span class="text-blue">/</span>
-                    django <span class="text-blue">/</span> Python
-                </p>
-
-                <h3 class="subheader">Mobile</h3>
-                <p class="default-text text-black">
-                    Swift <span class="text-blue">/</span> Kotlin <span class="text-blue">/</span>
-                    Alamofire <span class="text-blue">/</span> Firebase <span class="text-blue">/</span>
-                    CoreData <span class="text-blue">/</span> Room <span class="text-blue">/</span>
-                    Realm <span class="text-blue">/</span> Coroutine <span class="text-blue">/</span>
-                    RxJava <span class="text-blue">/</span> RxSwift <span class="text-blue">/</span>
-                    Unit Test <span class="text-blue">/</span> Navigation
-                </p>
-            </div>
-
-            <div class="development-categories">
-                <ul class="development-categories-list">
-                    <li class="development-categories-list-item text-black"><a href="#">IOS development</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Android development</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Web development</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">UI/UX design</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Testing</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Launch</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">IT consulting</a></li>
-                </ul>
-            </div>
+        <div class="contact-email">
+            <img class="icon-email" src="/src/assets/icons/IconEmail.svg" alt="IconEmail"/>
+            <p class="contacts text-blue">itcompany@mail.com</p>
         </div>
+    </div>
+</header>
 
-        <hr />
-        <div class="projects">
-            <h2 class="header-txt">
-                Developed more than <span class="text-blue">100</span> projects in
-                <span class="text-blue">15</span> industries
-            </h2>
 
-            <div class="project-list">
-<!--                Первый столбец-->
-                <div class="project-column1">
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/social_media.svg"  alt="SocialMedia"/>
-                        <p>Social media</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/fitness.svg" alt="Fitness">
-                        <p>Fitness and sport</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/bank.svg" alt="Bank"/>
-                        <p>Bank</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/construction.svg" alt="Construction">
-                        <p>Construction</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/game_projects.svg" alt=""/>
-                        <p>Game projects</p>
-                    </div>
-                </div>
-<!--                Второй столбец-->
-                <div class="project-column2">
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/education.svg" alt="Education">
-                        <p>Education</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/auto.svg" alt="Auto">
-                        <p>Auto, transport</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/medicine.svg" alt="Medicine">
-                        <p>Medicine, health</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/restaurant.svg" alt="Restaurants">
-                        <p>Restaurants, food delivery</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/marketplace.svg" alt="Marketplaces">
-                        <p>Marketplaces</p>
-                    </div>
-                </div>
-<!--                Третий столбец-->
-                <div class="project-column3">
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/ar.svg" alt="AR">
-                        <p>AR technologies</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/tv.svg" alt="TV">
-                        <p>TV series</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/startups.svg" alt="Startups">
-                        <p>Startups</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/religion.svg" alt="Religion">
-                        <p>Religion</p>
-                    </div>
-
-                    <div class="project-list-item">
-                        <img class="project-list-item-image" src="./assets/icons/online.svg" alt="Online">
-                        <p>Online cources</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="clients-companies">
-            <h2 class="header-txt">Projects we are proud of</h2>
+<!-- Первый скрин -->
+    <div class="description-upper-form">
+        <div class="description">
+            <h1 class="header-txt">
+                Development of
+                <span class="text-blue">mobile applications</span> and
+                <span class="text-blue">web services</span> of any complexity
+            </h1>
             <p class="default-text text-black">
-                Our software development company is truly proud of the wonderful clients
-                we have<br />worked with. We enjoy a long-term partnership
+                We create mobile applications for iOS, Android that transfer your
+                business to mobile applications of your customers' devices
             </p>
-
-            <div class="clients-companies-list">
-<!--                Client list-->
-                <ul class="clients-list">
-<!--                    Client item-->
-                    <li class="clients-list-item text-black"><a href="#">I-teka</a></li>
-                    <li class="clients-list-item text-black"><a href="#">Dauletten</a></li>
-                    <li class="clients-list-item text-black"><a href="#">Guru Bosch</a></li>
-                    <li class="clients-list-item text-black"><a href="#">Santo</a></li>
-                    <li class="clients-list-item text-black"><a href="#">Home Credit Bank</a></li>
-                    <li class="clients-list-item text-black"><a href="#">BI Partners</a></li>
-                    <li class="clients-list-item text-black"><a href="#">Europharma</a></li>
-                </ul>
-                <button class="clients-companies-button text-white background-blue">
-                    View 100 more projects
-                </button>
-            </div>
-<!--                        Clients i-teka-->
-            <div class="clients-i-teka">
-                <h2 class="header-txt">I-teka</h2>
-                <p class="default-text text-black">
-                    The application is designed to search for drugs by availability in
-                    pharmacies in cities. During quarantine, the application helped many
-                    people,<br />which gives more value.
-                </p>
-
-                <p class="default-text text-black">
-                    Business analysis <span class="text-blue">/</span> iOS <span class="text-blue">/</span>
-                    Android <span class="text-blue">/</span> QA <span class="text-blue">/</span> UI/UX Design
-                </p>
-
-                <div class="i-teka-info">
-                    <!--                Сами категории-->
-                    <div class="i-teka-category">
-                        <!--                    Иконка-->
-                        <img
-                                class="i-teka-icon"
-                                src="./assets/icons/IconGeo.svg"
-                                alt="GeoPosition"
-                        />
-                        <!--                    Текст-->
-                        <p class="default-text i-teka-text">Kazakhstan</p>
-                    </div>
-                    <div class="i-teka-category">
-                        <!--                    Иконка-->
-                        <img
-                                class="i-teka-icon"
-                                src="./assets/icons/IconCase.svg"
-                                alt="SuitCase"
-                        />
-                        <!--                    Текст-->
-                        <p class="default-text i-teka-text">Medicine</p>
-                    </div>
-                    <!--                Пользователь выросло-->
-                    <div class="users-growth">
-                        <h3 class="subheader">400%</h3>
-                        <p class="users-txt">User Growth</p>
-                    </div>
-                    <!--                Активность пользователей-->
-                    <div class="users-active">
-                        <h3 class="subheader">+ 200 000</h3>
-                        <p class="users-txt">Active Users</p>
-                    </div>
-
-                    <img class="clients-appstore" src="./assets/img/GooglePlay.png" alt="GooglePlay" />
-                    <img class="clients-appstore" src="./assets/img/AppStore.png" alt="AppStore" />
-
-
-                </div>
-            </div>
-<!--            Метка геопозиции и медицина-->
-            <img class="aside-image" src="/src/assets/img/i-teka.png" alt="i-teka"/>
         </div>
 
-        <hr />
-<!--        Contact form-->
-        <div class="contact-form background-blue">
-            <div class="contact-form-text">
-                <h3 class="header-txt text-white">
-                    Let's discuss<br />Your project
-                </h3>
-                <p class="default-text text-white">
-                    Let's figure out how to create an effective application,<br />its cost
-                    and terms of its development
-                </p>
-            </div>
-            <div class="contact-form-right-form box-shadow-black background-white">
-                <form class="contact-form-form" action="" method="post">
-                    <div class="contact-form-row">
-                        <div class="contact__form">
-                            <label class="feedback-form-label" for="feedback__phone">Best phone number</label>
-                            <div>
-                                <img
-                                        id="feedback_image"
-                                        src="./assets/img/IconFlag.png"
-                                        alt="FlagIcon"
-                                />
-                                <input
-                                        type="tel"
-                                        id="feedback__phone"
-                                        name="feedback__phone"
-                                        placeholder="+7 (702) 517-11-98"
-                                        required
-                                />
-                            </div>
-                        </div>
-
-                        <div class="contact__form">
-                            <label class="feedback-form-label" for="feedback__name">Full name</label>
-                            <input
-                                    type="text"
-                                    id="feedback__name"
-                                    name="feedback__name"
-                                    placeholder="Иван Иванов"
-                                    required
-                            />
-                        </div>
-                    </div>
-
-                    <button class="contact__button background-blue text-white" type="submit">
-                        Discuss the project
-                    </button>
-                </form>
-            </div>
-        </div>
-
-        <hr/>
-<!--        Application Development Stages-->
-        <div class="application-development-stages">
-            <div class="application-development-stages-text">
-                <h3 class="header-txt">Application Development Stages</h3>
-            </div>
-<!--            Левая часть-->
-            <div class="application-development-stage-item box-shadow-black left-column" data-number="1">
-                <h4 class="stage-header">Analysis</h4>
-                <img class="stage-image" src="./assets/icons/planing.svg" alt="Analysis">
-                <p class="default-text">
-                    We write technical specifications for <br/>
-                    development, taking into account the business <br/>
-                    processes and technologies of the customer and <br/>
-                    the needs of users.
-                </p>
-            </div>
-            <!--            Правая часть-->
-            <div class="application-development-stage-item box-shadow-black" data-number="4">
-                <h4 class="stage-header">Testing</h4>
-                <img class="stage-image"  src="./assets/icons/security.svg" alt="Testing">
-                <p class="default-text">
-                    We carry out functional testing and do bug fixes.<br/>
-                    We adapt the application to different phone <br/>
-                    resolutions
-                </p>
-            </div>
-            <!--            Левая часть-->
-            <div class="application-development-stage-item box-shadow-black left-column" data-number="2">
-                <h4 class="stage-header">Design</h4>
-                <img class="stage-image" src="./assets/icons/graphic_design.svg" alt="Design">
-                <p class="default-text">
-                    We adapt the customer's corporate identity to the <br/>
-                    platform guidelines. We draw convenient and <br/>
-                    understandable interfaces.
-                </p>
-            </div>
-            <!--            Правая часть-->
-            <div class="application-development-stage-item box-shadow-black" data-number="5">
-                <h4 class="stage-header">Launching</h4>
-                <img class="stage-image"  src="./assets/icons/hosting.svg" alt="Launching">
-                <p class="default-text">
-                    We design the application page and publish it in <br/>
-                    the App Store and Google Play stores.
-                </p>
-            </div>
-            <!--            Левая часть-->
-
-            <div class="application-development-stage-item box-shadow-black left-column" data-number="3">
-                <h4 class="stage-header">Development</h4>
-                <img class="stage-image"  src="./assets/icons/computer_coding.svg" alt="Development">
-                <p class="default-text">
-                    We create an extensible architecture, write clean <br/>
-                    and stable code. We integrate with customer <br/>
-                    technologies
-                </p>
-            </div>
-<!--            Правая часть-->
-            <div class="application-development-stage-item box-shadow-black" data-number="6">
-                <h4 class="stage-header">Support</h4>
-                <img class="stage-image"  src="./assets/icons/application.svg" alt="Support">
-                <p class="default-text">
-                    We monitor the stability of the application, update <br/>
-                    it for new devices and versions of iOS and <br/>
-                    Android.
-                </p>
-            </div>
-        </div>
-
-        <hr/>
-<!--        О компании-->
-        <div class="company-about">
-            <div class="company-text">
-                <h3 class="header-txt">Our teams</h3>
-                <p class="default-text">
-                    Thousand is a full-cycle digital production company with its own product analytics, <br/>
-                    design, web and mobile development.
-                </p>
-
-                <!--            Статистика компания-->
-                <div class="company-stats">
-                    <h3 class="header-txt">28</h3>
-                    <p class="users-txt">team members</p>
-                </div>
-                <div class="company-stats">
-                    <h3 class="header-txt">+100</h3>
-                    <p class="users-txt">projects</p>
-                </div>
-                <div class="company-stats">
-                    <h3 class="header-txt">7 years</h3>
-                    <p class="users-txt">in IT sphere</p>
-                </div>
-                <p class="default-text">
-                    All the necessary specialists - from a designer to a tester - are on our staff. We hire <br/>
-                    the best specialists in the market. It's expensive but worth it
-                </p>
-            </div>
-            <div class="company-video">
-                <img src="./assets/img/future_video.jpg" alt="future_video" />
-                <img class="video-button"
-                        src="/src/assets/icons/PlayButton.svg"
-                        alt="play_video"
-                />
-            </div>
-        </div>
-
-        <hr/>
-<!--        Блок с книгой-->
-        <div class="book-recommendation background-blue">
-            <div class="book-recommendation-text">
-                <h3 class="header-txt text-white">Get the book for free by leaving<br/>your contacts</h3>
-            </div>
-            <div>
-                <form class="book-recommendation-form box-shadow-black background-white" action="">
-                    <div class="feedback-form-field margin-top">
-                        <label class="feedback-form-label" for="feedback-phone">
-                            Phone number
-                        </label>
-                        <div>
-                            <img
-                                    src="./assets/img/IconFlag.png"
-                                    alt="FlagIcon"
-                            />
-                            <input
-                                    type="tel"
-                                    id="feedback-phone"
-                                    name="feedback-phone"
-                                    placeholder="+7 (111) 111-11-11"
-                                    required
-                            />
-                        </div>
-                    </div>
-
-                    <div  class="feedback-form-field margin-top">
-                        <label class="feedback-form-label" for="book-name">
-                            Full name
-                        </label>
+        <div class="upper-feedback box-shadow-black background-white">
+            <h2 class="subheader">
+                Leave your contacts and we will call you back<br />within 30 minutes
+            </h2>
+            <form class="feedback-form" action="#" method="post" >
+                <div class="feedback-form-field">
+                    <label class="feedback-form-label" for="book-phone">Phone number</label>
+                    <div>
+                        <img id="feedback-image" src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
                         <input
-                                type="text"
-                                id="book-name"
-                                name="feedback-name-"
-                                placeholder="Иванов Иван Иванович"
+                                type="tel"
+                                id="book-phone"
+                                name="feedback-phone"
+                                placeholder="+7 (111) 111-11-11"
                                 required
                         />
                     </div>
+                </div>
+                <div class="feedback-form-field">
+                    <label class="feedback-form-label" for='feedback-name'>Full name</label>
+                    <input
+                            type="text"
+                            id='feedback-name'
+                            name="feedback-name"
+                            placeholder="Иван Иванов"
+                            required
+                    />
+                </div>
+                <button class="feedback-button text-white background-blue">Get consultation</button>
+            </form>
+        </div>
+    </div>
 
-                    <div  class="feedback-form-field margin-top-30">
-                        <label class="feedback-form-label" for="feedback-email">email</label>
-                        <div>
-                            <input
-                                    type="email"
-                                    id="feedback-email"
-                                    name="feedback-email"
-                                    placeholder="mail@mail.com"
-                                    required
-                            />
-                        </div>
-                    </div>
+    <hr />
 
-                    <button class="book-button background-blue text-white" type="submit">
-                        Send my ebook to my mail
-                    </button>
+    <!-- Второй скрин -->
+    <div class="development background-white">
+        <div class="development-technologies">
+            <h2 class="header-txt">Full development cycle</h2>
+            <p class="default-text text-black">We use proven technologies</p>
+            <h3 class="subheader">Web</h3>
+            <p class="default-text text-black">
+                PHP <span class="text-blue">/</span> Javascript <span class="text-blue">/</span>
+                Node.JS <span class="text-blue">/</span> Web Socket <span class="text-blue">/</span>
+                Socket.io <span class="text-blue">/</span> Vue.js <span class="text-blue">/</span>
+                Nuxt <span class="text-blue">/</span> MySQL <span class="text-blue">/</span>
+                Laravel <span class="text-blue">/</span> GO lang <span class="text-blue">/</span>
+                django <span class="text-blue">/</span> Python
+            </p>
+            <h3 class="subheader">Mobile</h3>
+            <p class="default-text text-black">
+                Swift <span class="text-blue">/</span> Kotlin <span class="text-blue">/</span>
+                Alamofire <span class="text-blue">/</span> Firebase <span class="text-blue">/</span>
+                CoreData <span class="text-blue">/</span> Room <span class="text-blue">/</span>
+                Realm <span class="text-blue">/</span> Coroutine <span class="text-blue">/</span>
+                RxJava <span class="text-blue">/</span> RxSwift <span class="text-blue">/</span>
+                Unit Test <span class="text-blue">/</span> Navigation
+            </p>
+        </div>
+        <div class="development-categories">
+            <ul class="development-categories-list">
+                <li class="development-categories-list-item text-black"><a href="#">IOS development</a></li>
+                <li class="development-categories-list-item text-black"><a href="#">Android development</a></li>
+                <li class="development-categories-list-item text-black"><a href="#">Web development</a></li>
+                <li class="development-categories-list-item text-black"><a href="#">UI/UX design</a></li>
+                <li class="development-categories-list-item text-black"><a href="#">Testing</a></li>
+                <li class="development-categories-list-item text-black"><a href="#">Launch</a></li>
+                <li class="development-categories-list-item text-black"><a href="#">IT consulting</a></li>
+            </ul>
+        </div>
+    </div>
 
-                </form>
+    <!-- Футер -->
+    <footer class="footer">
+        <a href="#" class="header-txt logo text-white">IT WEBSITE</a>
+        <div class="footer-main">
+            <div class="footer-item">
+                <img class="footer-icon icon-grayscale" src="./assets/icons/IconPhone.svg" alt="IconPhone"/>
+                <p class="users-txt footer-text">Contact nums</p>
+                <p class="default-text text-white">+7 (778) 395 90 26</p>
             </div>
-
-            <div class="book-recommendation-image">
-                <img src="./assets/img/Book.png" alt="book" />
+            <div class="footer-item">
+                <img class="footer-icon icon-grayscale" src="./assets/icons/IconEmail.svg" alt="IconEmail"/>
+                <p class="users-txt footer-text">Post</p>
+                <p class="default-text text-white">mail@mail.com6</p>
+            </div>
+            <div class="footer-item">
+                <img class="footer-icon icon-grayscale" src="./assets/icons/IconGeo.svg" alt="IconGeo"/>
+                <p class="users-txt footer-text">Address</p>
+                <p class="default-text text-white">City city, street st. 90</p>
+            </div>
+            <div class="footer-item">
+                <img class="footer-icon" src="./assets/icons/IconFile.svg" alt="IconFile"/>
+                <p class="users-txt footer-text">Leave a request</p>
+                <p class="default-text text-white">Leave a request</p>
+            </div>
+            <div class="footer-bottom">
+                <img class="footer-map" src="./assets/icons/Map.svg" alt="Map" />
+                <p class="default-text text-white">We work throughout world</p>
             </div>
         </div>
-
-        <hr/>
-
-        <div class="faq background-white">
-            <div class="faq-text">
-                <h3 class="header-txt">FAQ</h3>
-            </div>
-            <div class="faq-questions">
-                <div class="question border-bottom">
-                    <h4 class="footer-header">
-                        What is the cost of a mobile application?
-                    </h4>
-                    <img
-                            class="faq-image"
-                            src="./assets/icons/IconPlus.svg"
-                            alt="IconPlus"
-                    />
-                </div>
-
-                <div class="question border-bottom">
-                    <h4 class="footer-header">How long will development take?</h4>
-                    <img
-                            class="faq-image"
-                            src="./assets/icons/IconPlus.svg"
-                            alt="IconPlus"
-                    />
-                </div>
-
-                <div class="question border-bottom">
-                    <h4 class="footer-header">
-                        Do you provide a guarantee for the mobile application?
-                    </h4>
-                    <img
-                            class="faq-image"
-                            src="./assets/icons/IconPlus.svg"
-                            alt="IconPlus"
-                    />
-                </div>
-
-                <div class="question border-bottom">
-                    <h4 class="footer-header">
-                        I will not tell my idea, do you guarantee confidentiality?
-                    </h4>
-                    <img
-                            class="faq-image"
-                            src="./assets/icons/IconPlus.svg"
-                            alt="IconPlus"
-                    />
-                </div>
-            </div>
-        </div>
-
-        <hr/>
-
-        <footer class="footer">
-            <a href="#" class="header-txt logo text-white">IT WEBSITE</a>
-            <div class="footer-main">
-                <div class="footer-item">
-                    <img
-                            class="footer-icon icon-grayscale"
-                            src="./assets/icons/IconPhone.svg"
-                            alt="IconPhone"
-                    />
-                    <p class="users-txt footer-text">Contact nums</p>
-                    <p class="default-text text-white">+7 (778) 395 90 26</p>
-                </div>
-
-                <div class="footer-item">
-                    <img
-                            class="footer-icon icon-grayscale"
-                            src="./assets/icons/IconEmail.svg"
-                            alt="IconEmail"
-                    />
-                    <p class="users-txt footer-text">Post</p>
-                    <p class="default-text text-white">mail@mail.com6</p>
-                </div>
-
-                <div class="footer-item">
-                    <img
-                            class="footer-icon icon-grayscale"
-                            src="./assets/icons/IconGeo.svg"
-                            alt="IconGeo"
-                    />
-                    <p  class="users-txt footer-text">Address</p>
-                    <p class="default-text text-white">City city, street st. 90</p>
-                </div>
-
-                <div class="footer-item">
-                    <img
-                            class="footer-icon "
-                            src="./assets/icons/IconFile.svg"
-                            alt="IconFile"
-                    />
-                    <p class="users-txt footer-text">Leave a request</p>
-                    <p class="default-text text-white">Leave a request</p>
-                </div>
-                <div class="footer-bottom">
-                    <img class="footer-map" src="./assets/icons/Map.svg" alt="Map" />
-                    <p class="default-text text-white" >We work throughout world</p>
-                </div>
-            </div>
-        </footer>
-    </body>
+    </footer>
+</body>
 </html>

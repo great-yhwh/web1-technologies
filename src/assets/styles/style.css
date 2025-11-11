@@ -6,39 +6,28 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(235, 236, 237);
-    width: 1440px;
-    height: 5000px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.text-blue {
-    color: rgba(45, 102, 238, 1)
-}
-
-.text-black {
-    color: black;
-}
-
-.text-black  a{
-    color: black;
-}
-
-.text-white {
-    color: white;
-}
-
-.background-white {
-    background-color: white;
-}
-
-.background-blue {
-    background-color: rgba(45, 102, 238, 1);
-}
+.text-blue { color: rgba(45, 102, 238, 1); }
+.text-black { color: black; }
+.text-black a { color: black; }
+.text-white { color: white; }
+.background-white { background-color: white; }
+.background-blue { background-color: rgba(45, 102, 238, 1); }
+.background-dark { background-color: rgba(15, 23, 39); }
 
 .box-shadow-black {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
     0 0 24px rgba(0, 0, 0, 0.16);
 }
 
+/* ==================== */
+/* Хэдер - Desktop      */
+/* ==================== */
 header.site-header {
     position: fixed;
     top: 0;
@@ -55,6 +44,20 @@ header.site-header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+
+/*  Menu  - скрыт на десктопе */
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+.menu-icon,
+.close-icon {
+    display: none;
 }
 
 a.site-logo {
@@ -118,8 +121,13 @@ p.contacts {
     margin-top: 0;
     float: left;
 }
+
+/* ==================== */
+/* Первый скрин         */
+/* ==================== */
 div.description-upper-form {
     height: 700px;
+    padding-top: 100px;
 }
 
 div.description {
@@ -130,7 +138,6 @@ div.description {
 }
 
 .header-txt {
-
     font-size: 36px;
     line-height: 51px;
     font-weight: 700;
@@ -220,8 +227,12 @@ button.feedback-button {
     border-radius: 8px;
 }
 
+/* ==================== */
+/* Второй скрин         */
+/* ==================== */
 div.development {
     height: 400px;
+    padding: 80px 0;
 }
 
 div.development-technologies {
@@ -230,6 +241,7 @@ div.development-technologies {
     width: 496px;
     height: 200px;
 }
+
 div.development-categories {
     margin-top: 40px;
     margin-left: 40px;
@@ -250,401 +262,9 @@ li.development-categories-list-item a {
     text-decoration: none;
 }
 
-div.projects {
-    width:1300px;
-    height: 450px;
-    margin-left: 106px;
-}
-
-div.project-list {
-    width: 1223px;
-    height: 280px;
-}
-
-.project-column1, .project-column2, .project-column3 {
-    float: left;
-    width: 391px;
-    height: 280px;
-}
-
-div.project-list-item {
-    margin-left: 60px;
-    width: 391px;
-    height: 44px;
-}
-
-img.project-list-item-image {
-    position: absolute;
-    margin-top: -15px;
-    margin-left: -65px;
-}
-
-div.clients-companies {
-    width: 1230px;
-    height: 700px;
-    margin-left: 106px;
-}
-
-div.clients-companies-list {
-    margin-top: 50px;
-    width: 1000px;
-    height: 58px;
-}
-
-ul.clients-list {
-    margin-left: 10px;
-    width: 740px;
-    height: 58px;
-    padding: 0;
-    display: inline-block;
-    list-style-type: none;
-}
-
-li.clients-list-item {
-    margin-right: 20px;
-    display: inline-block;
-    height: 58px;
-}
-
-li.clients-list-item a {
-    font-size: 17px;
-    text-decoration: none;
-}
-
-button.clients-companies-button {
-    margin-top: 15px;
-    float: right;
-    width: 207px;
-    height: 40px;
-    border: none;
-    padding: 11px 24px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-div.clients-i-teka {
-    width: 600px;
-    height: 300px;
-}
-
-div.i-teka-info {
-    width: 316px;
-    height: 70px;
-}
-
-.i-teka-category, .users-growth, .users-active {
-    float: left;
-}
-
-img.i-teka-icon {
-    position: absolute;
-    margin-top: 15px;
-}
-
-p.i-teka-text{
-    margin-left: 25px;
-    margin-right: 21px;
-}
-
-div.users-growth {
-    padding: 0;
-    margin-right: 45px;
-}
-
-p.users-txt{
-    font-weight: 500;
-    font-size: 13px;
-    color: rgba(102, 112, 133, 1);
-}
-
-img.clients-appstore {
-    float: left;
-    margin-right: 16px;
-}
-
-img.aside-image {
-    position: absolute;
-    margin-top: -260px;
-    margin-left: 400px;
-}
-
-div.contact-form {
-    height: 300px;
-}
-
-div.contact-form-text {
-    margin-left: 108px;
-    float: left;
-    width:600px;
-    height: 168px;
-}
-
-div.contact-form-right-form {
-    width: 600px;
-    padding: 10px 20px;
-    height:170px;
-    float: left;
-    margin-top: 45px;
-    border-radius: 8px;
-}
-
-form.contact-form-form {
-    width: 450px;
-    margin-top: 24px;
-}
-
-.contact-form-row {
-    display: flex;
-    gap: 70px; /* Расстояние между полями */
-}
-
-.contact__form {
-    width: 450px;
-    height: 58px;
-    flex: 1;
-}
-
-.contact__button {
-    margin-top: 40px;
-    float: right;
-    width: 178px;
-    height: 40px;
-    border: none;
-    padding: 9px 16px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-right: -140px;
-}
-
-#feedback__name {
-    width: 235px;
-    height: 30px;
-    border: none;
-    margin-left: -1px;
-    padding-left: 22px;
-    border-bottom: 1px solid rgba(208, 213, 221, 1);
-    font-size: 16px;
-}
-
-#feedback__phone {
-    padding-left: 22px;
-    margin-left: -1px;
-    width: 235px;
-    height: 30px;
-    border: none;
-    border-bottom: 1px solid rgba(208, 213, 221, 1);
-    font-size: 16px;
-}
-
-#feedback__phone::placeholder,
-#feedback__name::placeholder {
-    color: black;
-    font-weight: 300;
-}
-
-#feedback_image {
-    position: absolute;
-    margin-top: 7px;
-    width: 16px;
-    height: 17px;
-}
-
-div.application-development-stages {
-    height:810px;
-    background-color: white;
-
-}
-
-div.application-development-stages-text{
-    margin-left: 108px;
-    padding-top: 10px;
-}
-
-.stage-header {
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 55px;
-}
-
-
-.application-development-stage-item {
-    margin-left: 108px;
-    width: 392px;
-    height: 172px;
-    float: left;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-}
-
-.application-development-stage-item::after {
-    content: attr(data-number);
-    position: absolute;
-
-    right: 1px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 275px;
-    font-weight: 900;
-    color: rgba(45, 102, 238, 0.05);
-    z-index: 0;
-    line-height: 1;
-    pointer-events: none;
-}
-
-img.stage-image {
-    position: absolute;
-    margin-top: -60px;
-}
-
-div.left-column {
-    margin-right: 250px;
-}
-
-div.company-about {
-    width: 1250px;
-    height: 500px;
-    margin-left: 106px;
-}
-
-div.company-text {
-    width: 600px;
-    height: 341px;
-    float: left;
-}
-
-div.company-stats {
-    width:200px;
-    float: left;
-}
-
-div.company-video {
-    margin-left: 20px;
-    margin-top: 40px;
-}
-
-img.video-button {
-    position: absolute;
-    margin-top: 166px;
-    margin-left: -331.5px;
-}
-
-div.book-recommendation {
-    height:588px;
-}
-
-div.book-recommendation-text{
-    margin-left: 108px;
-    padding-top: 10px;
-}
-
-form.book-recommendation-form {
-    margin-left: 108px;
-    width: 520px;
-    height: 220px;
-    padding: 20px;
-    float: left;
-    border-radius: 12px;
-}
-
-
-div.book-recommendation-image {
-    margin-left: 200px;
-    margin-top: -160px;
-    float: left;
-}
-
-.book-image img {
-    width:200px;
-    height: 420px;
-}
-.margin-top {
-    margin-top: 20px;
-}
-
-.margin-top-30 {
-    margin-top: 30px;
-}
-
-#feedback-phone {
-    width: 175px;
-    height: 30px;
-    border: none;
-    border-bottom: 1px solid rgba(208, 213, 221, 1);
-    font-size: 16px;
-}
-
-#book-name {
-    width: 295px;
-    height: 30px;
-    border: none;
-    margin-left: -2px;
-    padding-left: 2px;
-    border-bottom: 1px solid rgba(208, 213, 221, 1);
-    font-size: 16px;
-}
-#feedback-email{
-    width: 520px;
-    border: none;
-    margin-left: -2px;
-    padding-left: 2px;
-    border-bottom: 1px solid rgba(208, 213, 221, 1);
-    font-size: 16px;
-}
-
-#feedback-phone::placeholder,
-#book-name::placeholder,
-#feedback-email::placeholder{
-    color: black;
-    font-weight: 300;
-}
-
-button.book-button {
-    margin-top: 110px;
-    width: 225px;
-    height: 40px;
-    float: right;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-}
-
-div.faq {
-    height:350px;
-}
-
-div.faq-text{
-    padding-top: 10px;
-    margin-left: 108px;
-}
-
-div.faq-questions {
-    margin-left: 108px;
-    height: 420px;
-}
-
-div.question {
-    margin-right: 20px;
-    width:600px;
-    height:84px;
-    float: left;
-    border-top: 0.5px solid rgba(208, 213, 221, 1);
-}
-
-.faq-image {
-    position: absolute;
-    margin-top: -70px;
-    margin-left: 535px;
-}
-
-.border-bottom {
-    border-bottom: 0.5px solid rgba(208, 213, 221, 1);
-}
-
+/* ==================== */
+/* Футер                */
+/* ==================== */
 footer.footer {
     height: 222px;
     border-radius: 8px;
@@ -702,4 +322,287 @@ h4.footer-header {
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
+}
+
+/* ==================== */
+/* 1: 768px             */
+/* ==================== */
+@media (max-width: 768px) {
+     /*Menu - появляется  */
+    .mobile-menu-button {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    .close-icon {
+        display: none;
+        width: 20px;
+        height: 20px;
+    }
+
+/*Смена иконок при активации меню */
+    .mobile-menu-checkbox:checked ~ .mobile-menu-button .menu-icon {
+        display: none;
+    }
+
+    .mobile-menu-checkbox:checked ~ .mobile-menu-button .close-icon {
+        display: block;
+    }
+
+    /* Header корректировка */
+    header.site-header {
+        padding: 12px 20px 12px 60px; /* Отступ слева для кнопки меню */
+        height: 50px;
+    }
+
+    a.site-logo {
+        margin-left: 10px;
+    }
+
+    .body-header-nav-menu {
+        display: none;
+    }
+
+    div.header-contacts {
+        width: auto;
+        margin-left: 20px;
+    }
+
+    div.contact-phone .contacts:last-child,
+    div.contact-email .contacts {
+        display: none;
+    }
+
+    /* Мобильное меню */
+    .mobile-menu-checkbox:checked ~ .body-header-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        z-index: 999;
+        padding: 80px 20px 20px;
+        margin: 0;
+        float: none;
+    }
+
+    .mobile-menu-checkbox:checked ~ .body-header-nav .body-header-nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-menu-checkbox:checked ~ .body-header-nav .body-header-nav-menu-item {
+        display: block;
+        margin: 0;
+    }
+
+    .mobile-menu-checkbox:checked ~ .body-header-nav .body-header-nav-menu-item a {
+        font-size: 18px;
+        padding: 12px 0;
+        display: block;
+        border-bottom: 1px solid rgba(208, 213, 221, 0.3);
+    }
+
+    /* Первый скрин */
+    div.description-upper-form {
+        height: auto;
+        padding: 80px 20px 60px;
+    }
+
+    div.description {
+        width: 100%;
+        margin: 0 auto 40px;
+        text-align: center;
+        height: auto;
+    }
+
+    div.upper-feedback {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    form.feedback-form {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    div.feedback-form-field {
+        width: 100%;
+        height: auto;
+    }
+
+    #book-phone,
+    #feedback-name {
+        width: 100%;
+    }
+
+    button.feedback-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /*  Второй скрин */
+    div.development {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    div.development-technologies {
+        width: 100%;
+        margin: 0 auto 40px;
+        float: none;
+        height: auto;
+    }
+
+    div.development-categories {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        height: auto;
+    }
+
+    /* Футер */
+    footer.footer {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    div.footer-main {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-item {
+        width: 50%;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        width: 100%;
+        padding-top: 40px;
+    }
+}
+
+/* ==================== */
+/* 2: 425px             */
+/* ==================== */
+@media (max-width: 425px) {
+    /* Header */
+    header.site-header {
+        padding: 10px 15px 10px 50px;
+        height: 45px;
+        width: calc(100% - 20px);
+    }
+
+    a.site-logo {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .mobile-menu-button {
+        left: 15px;
+    }
+
+    .menu-icon,
+    .close-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    div.header-contacts {
+        display: none;
+    }
+
+    /*  Первый скрин */
+    div.description-upper-form {
+        padding: 70px 15px 40px;
+    }
+
+    .header-txt {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .subheader {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    p.default-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    div.upper-feedback {
+        padding: 20px;
+    }
+
+    form.feedback-form {
+        gap: 15px;
+    }
+
+    button.feedback-button {
+        padding: 15px 20px;
+        height: 50px;
+    }
+
+    /*  Второй скрин */
+    div.development {
+        padding: 40px 15px;
+    }
+
+    div.development-technologies {
+        margin-left: 0;
+    }
+
+    .development-technologies .header-txt {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .development-technologies .subheader {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    footer.footer {
+        padding: 20px 15px;
+    }
+
+    .footer-item {
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .footer-text {
+        margin-left: 0;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
 }
