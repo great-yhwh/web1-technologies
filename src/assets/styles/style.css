@@ -540,7 +540,7 @@ h4.footer-header {
         width: 50%;
         flex-direction: column;
         height: auto;
-        gap: 30px;
+        gap: 20px;
     }
 
     div.feedback-form-field {
@@ -554,9 +554,8 @@ h4.footer-header {
     }
 
     button.feedback-button {
-        width: 100%;
+        width: 145px;
         height: 40px;
-        text-align: center;
     }
 
     /* Второй скрин */
@@ -738,19 +737,9 @@ h4.footer-header {
         display: none;
     }
 
-    /* Первый скрин */
-    div.description-upper-form {
-        padding: 70px 15px 40px;
-    }
-
-    .header-txt {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .subheader {
-        font-size: 18px;
-        line-height: 22px;
+    div.description {
+        width: 100%;
+        margin-left: -5px;
     }
 
     p.default-text {
@@ -759,7 +748,8 @@ h4.footer-header {
     }
 
     div.upper-feedback {
-        padding: 20px;
+        width: 100%;
+        margin-left: -5px;
     }
 
     form.feedback-form {
@@ -768,46 +758,84 @@ h4.footer-header {
 
     button.feedback-button {
         padding: 15px 20px;
-        height: 50px;
+        height: 40px;
     }
 
     /* Второй скрин */
     div.development {
+        height: auto;
         padding: 40px 15px;
+        display: block;
     }
 
     div.development-technologies {
-        margin-left: 0;
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .development-technologies .header-txt {
-        font-size: 28px;
-        line-height: 36px;
+    div.development-technologies-content {
+        width: 100%;
+        max-width: none;
     }
 
-    .development-technologies .subheader {
+    div.development-categories {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
+    }
+
+    ul.development-categories-list {
+        padding: 0; /
+        margin: 0;
+    }
+
+    li.development-categories-list-item {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    li.development-categories-list-item a {
         font-size: 16px;
+        line-height: 1.4;
     }
 
     /* Footer */
     footer.footer {
+        height: auto;
         padding: 20px 15px;
     }
 
     .footer-item {
-        width: 100%;
-        float: none;
+        width: 50%;
+        float: left;
         text-align: center;
         padding-left: 0;
+        margin-bottom: 20px;
+        height: 60px;
+        box-sizing: border-box;
+    }
+
+    img.footer-icon {
+        position: static;
+        display: block;
+        margin: 0 auto 5px;
     }
 
     .footer-text {
         margin-left: 0;
         color: rgba(102, 112, 133, 1);
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .footer-item p.default-text {
+        margin: 0;
+        font-size: 13px;
     }
 
     .footer-bottom {
         padding-top: 20px;
+        clear: both;
     }
 
     .logo {
