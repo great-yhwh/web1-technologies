@@ -4,177 +4,235 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT Website</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<!-- Хэдер -->
-<header class="site-header background-white">
-    <!-- Меню для не десктопных версий -->
-    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
-    <label for="mobile-menu-toggle" class="mobile-menu-button">
-        <img src="./assets/img/menu.png" alt="Menu" class="menu-icon">
-        <img src="./assets/img/close.png" alt="Close" class="close-icon">
-    </label>
 
-    <a class="site-logo text-blue" href="#">IT WEBSITE</a>
+<!-- HEADER -->
+<header class="header">
+    <div class="burger">
+        <div class="burger__menu"></div>
+    </div>
 
-    <nav class="body-header-nav">
-        <ul class="body-header-nav-menu">
-            <li class="body-header-nav-menu-item"><a>Service</a></li>
-            <li class="body-header-nav-menu-item"><a>Media</a></li>
-            <li class="body-header-nav-menu-item"><a>Cases</a></li>
-            <li class="body-header-nav-menu-item"><a>FAQ</a></li>
-            <li class="body-header-nav-menu-item"><a>Contacts</a></li>
+    <a class="logo text_color_blue" href="#">IT WEBSITE</a>
+
+    <nav class="header__menu">
+        <ul class="menu">
+            <li class="menu__item"><a href="#">Services</a></li>
+            <li class="menu__item"><a href="#">Media</a></li>
+            <li class="menu__item"><a href="#">Cases</a></li>
+            <li class="menu__item"><a href="#">FAQ</a></li>
+            <li class="menu__item"><a href="#">Contacts</a></li>
         </ul>
     </nav>
 
-    <div class="header-contacts">
-        <div class="contact-phone">
-            <img class="icon-phone" src="/src/assets/icons/IconPhone.svg" alt="IconPhone"/>
-            <p class="contacts text-blue">+7 (111) 111 11 11</p>
-            <p class="contacts text-blue">+7 (111) 111 11 11</p>
+    <div class="header__contacts">
+        <div class="contacts__phone">
+            <img
+                    class="contacts__image image__phone"
+                    src="./assets/icons/IconPhone.svg"
+                    alt="PhoneIcon"
+            />
+            <p class="contacts__info text_color_blue">+7 (111) 111 11 11</p>
+            <p class="contacts__info text_color_blue">+7 (111) 111 11 11</p>
         </div>
-        <div class="contact-email">
-            <img class="icon-email" src="/src/assets/icons/IconEmail.svg" alt="IconEmail"/>
-            <p class="contacts text-blue">itcompany@mail.com</p>
-        </div>
-    </div>
-
-    <!-- Для мобильного меню -->
-    <div class="header-contacts-mobile">
-        <div class="contact-item">
-            <img class="icon-phone" src="/src/assets/icons/IconPhone.svg" alt="IconPhone"/>
-            <p class="contacts text-blue">+7 (111) 111 11 11</p>
-        </div>
-        <div class="contact-item">
-            <img class="icon-phone" src="/src/assets/icons/IconPhone.svg" alt="IconPhone"/>
-            <p class="contacts text-blue">+7 (111) 111 11 11</p>
-        </div>
-        <div class="contact-item">
-            <img class="icon-email" src="/src/assets/icons/IconEmail.svg" alt="IconEmail"/>
-            <p class="contacts text-blue">itcompany@mail.com</p>
+        <div class="contacts__email">
+            <img
+                    class="contacts__image image__email"
+                    src="./assets/icons/IconEmail.svg"
+                    alt="MailIcon"
+            />
+            <p class="contacts__info text_color_blue">itcompany@mail.com</p>
         </div>
     </div>
 </header>
 
-
-<!-- Первый скрин -->
-    <div class="description-upper-form">
-        <div class="description">
-            <h1 class="header-txt">
+<!-- MAIN SECTION (HERO) -->
+<section class="main">
+    <div class="container">
+        <div class="main__description">
+            <h2 class="description__header header__text">
                 Development of
-                <span class="text-blue">mobile applications</span> and
-                <span class="text-blue">web services</span> of any complexity
-            </h1>
-            <p class="default-text text-black">
+                <span class="text_color_blue">mobile applications</span> and
+                <span class="text_color_blue">web services</span> of any complexity
+            </h2>
+
+            <p class="default__text">
                 We create mobile applications for iOS, Android that transfer your
                 business to mobile applications of your customers' devices
             </p>
         </div>
 
-        <div class="upper-feedback box-shadow-black background-white">
-            <h2 class="subheader">
-                Leave your contacts and we will call you back<br />within 30 minutes
-            </h2>
-            <form class="feedback-form" action="#" method="post" >
-                <div class="feedback-form-field">
-                    <label class="feedback-form-label" for="book-phone">Phone number</label>
-                    <div>
-                        <img id="feedback-image" src="/src/assets/img/IconFlag.png" alt="FlagIcon"/>
-                        <input
-                                type="tel"
-                                id="book-phone"
-                                name="feedback-phone"
-                                placeholder="+7 (111) 111-11-11"
-                                required
-                        />
+        <!-- FORM -->
+        <div class="form">
+            <div class="intro-title-container">
+                <h3 class="intro-title">Leave your contacts and we will call you back within 30 minutes</h3>
+            </div>
+            <form action="#" method="post" class="form-elements">
+                <div class="form-field phone-field">
+                    <label for="phone" class="form-label">Phone number</label>
+                    <div class="input-with-icon">
+                        <img src="./assets/img/IconFlag.png" alt="flag" class="input-icon" />
+                        <input id="phone" type="tel" placeholder="+7 (111) 111-11-11" required />
                     </div>
                 </div>
-                <div class="feedback-form-field">
-                    <label class="feedback-form-label" for='feedback-name'>Full name</label>
-                    <input
-                            type="text"
-                            id='feedback-name'
-                            name="feedback-name"
-                            placeholder="Иван Иванов"
-                            required
-                    />
+                <div class="form-field">
+                    <label for="name" class="form-label">Full name</label>
+                    <input id="name" type="text" placeholder="Иван Иванов" required />
                 </div>
-                <button class="feedback-button text-white background-blue">Get consultation</button>
+                <button class="consult-btn">Get consultation</button>
             </form>
         </div>
-    </div>
 
-    <hr />
-
-    <!-- Второй скрин -->
-    <div class="development background-white">
-        <div class="development-technologies">
-            <div class="development-technologies-content">
-                <h2 class="header-txt">Full development cycle</h2>
-                <p class="default-text text-black">We use proven technologies</p>
-                <h3 class="subheader">Web</h3>
-                <p class="default-text text-black">
-                    PHP <span class="text-blue">/</span> Javascript <span class="text-blue">/</span>
-                    Node.JS <span class="text-blue">/</span> Web Socket <span class="text-blue">/</span>
-                    Socket.io <span class="text-blue">/</span> Vue.js <span class="text-blue">/</span>
-                    Nuxt <span class="text-blue">/</span> MySQL <span class="text-blue">/</span>
-                    Laravel <span class="text-blue">/</span> GO lang <span class="text-blue">/</span>
-                    django <span class="text-blue">/</span> Python
-                </p>
-                <h3 class="subheader">Mobile</h3>
-                <p class="default-text text-black">
-                    Swift <span class="text-blue">/</span> Kotlin <span class="text-blue">/</span>
-                    Alamofire <span class="text-blue">/</span> Firebase <span class="text-blue">/</span>
-                    CoreData <span class="text-blue">/</span> Room <span class="text-blue">/</span>
-                    Realm <span class="text-blue">/</span> Coroutine <span class="text-blue">/</span>
-                    RxJava <span class="text-blue">/</span> RxSwift <span class="text-blue">/</span>
-                    Unit Test <span class="text-blue">/</span> Navigation
-                </p>
+        <!-- Внутри секции .main -->
+        <div class="main__background__image">
+            <div class="main__background">
+                <!-- Левая колонка -->
+                <img
+                        src="./assets/img/Изображения для бэкграунда/column-left.webp"
+                        alt="Left Column"
+                        class="background__image"
+                />
+                <!-- Правая колонка -->
+                <img
+                        src="./assets/img/Изображения для бэкграунда/column-right.webp"
+                        alt="Right Column"
+                        class="background__image"
+                />
             </div>
-            <div class="development-categories">
-                <ul class="development-categories-list">
-                    <li class="development-categories-list-item text-black"><a href="#">IOS development</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Android development</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Web development</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">UI/UX design</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Testing</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">Launch</a></li>
-                    <li class="development-categories-list-item text-black"><a href="#">IT consulting</a></li>
-                </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- DEVELOPMENT SECTION -->
+<section class="development">
+    <div class="container">
+        <div class="development__technologies">
+            <h2 class="header__text">Full development cycle</h2>
+            <p class="default__text">We use proven technologies</p>
+
+            <div class="techno__header">
+                <h3 class="subheader__text">Web</h3>
+                <div class="development__tools">
+                    <!-- Я преобразовал твой текст в блоки, как в требуемой разметке -->
+                    <p class="tool">PHP</p>
+                    <p class="tool">Javascript</p>
+                    <p class="tool">Node.JS</p>
+                    <p class="tool">Web Socket</p>
+                    <p class="tool">Socket.io</p>
+                    <p class="tool">Vue.js</p>
+                    <p class="tool">Nuxt</p>
+                    <p class="tool">MySQL</p>
+                    <p class="tool">Laravel</p>
+                    <p class="tool">GO lang</p>
+                    <p class="tool">django</p>
+                    <p class="tool">Python</p>
+                </div>
+            </div>
+
+            <div class="techno__header">
+                <h3 class="subheader__text">Mobile</h3>
+                <div class="development__tools">
+                    <p class="tool">Swift</p>
+                    <p class="tool">Kotlin</p>
+                    <p class="tool">Alamofire</p>
+                    <p class="tool">Firebase</p>
+                    <p class="tool">CoreData</p>
+                    <p class="tool">Room</p>
+                    <p class="tool">Realm</p>
+                    <p class="tool">Coroutine</p>
+                    <p class="tool">RxJava</p>
+                    <p class="tool">RxSwift</p>
+                    <p class="tool">Unit Test</p>
+                    <p class="tool">Navigation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="development__categories">
+            <ul class="development__list">
+                <li class="development__item">
+                    <a href="#">IOS development</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+                <li class="development__item">
+                    <a href="#">Android development</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+                <li class="development__item">
+                    <a href="#">Web development</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+                <li class="development__item">
+                    <a href="#">UI/UX design</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+                <li class="development__item">
+                    <a href="#">Testing</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+                <li class="development__item">
+                    <a href="#">Launch</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+                <li class="development__item">
+                    <a href="#">IT consulting</a>
+                    <img src="./assets/icons/arrow.svg" class="development__arrow" alt="arrow"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__block">
+            <a href="#" class="footer__logo text_color_white">IT WEBSITE</a>
+            <div class="footer__main">
+                <article class="footer__item">
+                    <div class="footer__item__header">
+                        <img class="footer__icon icon__grayscale" src="./assets/icons/IconPhone.svg" alt="Icon"/>
+                        <p class="form__label footer__text">Contact nums</p>
+                    </div>
+                    <p class="default__text text_color_white">+7 (778) 395 90 26</p>
+                </article>
+
+                <article class="footer__item">
+                    <div class="footer__item__header">
+                        <img class="footer__icon icon__grayscale" src="./assets/icons/IconEmail.svg" alt="Icon"/>
+                        <p class="form__label footer__text">Post</p>
+                    </div>
+                    <p class="default__text text_color_white">mail@mail.com</p>
+                </article>
+
+                <article class="footer__item">
+                    <div class="footer__item__header">
+                        <img class="footer__icon icon__grayscale" src="./assets/icons/IconGeo.svg" alt="Icon"/>
+                        <p class="form__label footer__text">Address</p>
+                    </div>
+                    <p class="default__text text_color_white">City city, street st. 90</p>
+                </article>
+
+                <article class="footer__item">
+                    <div class="footer__item__header">
+                        <img class="footer__icon" src="./assets/icons/IconFile.svg" alt="Icon"/>
+                        <p class="form__label footer__text">Leave a request</p>
+                    </div>
+                    <p class="default__text text_color_white">Leave a request</p>
+                </article>
+            </div>
+            <div class="footer__bottom">
+                <img class="footer__map" src="./assets/icons/Map.svg" alt="Map" />
+                <p class="default__text text_color_white">We work throughout world</p>
             </div>
         </div>
     </div>
+</footer>
 
-    <!-- Футер -->
-    <footer class="footer">
-        <a href="#" class="header-txt logo text-white">IT WEBSITE</a>
-        <div class="footer-main">
-            <div class="footer-item">
-                <img class="footer-icon icon-grayscale" src="./assets/icons/IconPhone.svg" alt="IconPhone"/>
-                <p class="users-txt footer-text">Contact nums</p>
-                <p class="default-text text-white">+7 (778) 395 90 26</p>
-            </div>
-            <div class="footer-item">
-                <img class="footer-icon icon-grayscale" src="./assets/icons/IconEmail.svg" alt="IconEmail"/>
-                <p class="users-txt footer-text">Post</p>
-                <p class="default-text text-white">mail@mail.com6</p>
-            </div>
-            <div class="footer-item">
-                <img class="footer-icon icon-grayscale" src="./assets/icons/IconGeo.svg" alt="IconGeo"/>
-                <p class="users-txt footer-text">Address</p>
-                <p class="default-text text-white">City city, street st. 90</p>
-            </div>
-            <div class="footer-item">
-                <img class="footer-icon" src="./assets/icons/IconFile.svg" alt="IconFile"/>
-                <p class="users-txt footer-text">Leave a request</p>
-                <p class="default-text text-white">Leave a request</p>
-            </div>
-            <div class="footer-bottom">
-                <img class="footer-map" src="./assets/icons/Map.svg" alt="Map" />
-                <p class="default-text text-white">We work throughout world</p>
-            </div>
-        </div>
-    </footer>
+<script src="index.js"></script>
 </body>
 </html>
