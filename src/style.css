@@ -1,45 +1,9 @@
-.list-item {
-    font-size: 16px;
+@import "assets/style/index.css";
+
+body {
+    margin: 0;
 }
 
-.list-item__inner {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    padding: 5px 0;
-}
-
-.list-item__items {
-    padding-left: 2.5em;
-    display: none;
-}
-
-.list-item__arrow {
-    width: 1.5em;
-    height: 1.5em;
-    cursor: pointer;
-    flex-shrink: 0;
-    fill: #808080;
-    transition: transform 0.2s ease;
-}
-
-.list-item__arrow.placeholder {
-    width: 1.5em;
-    height: 1.5em;
-    cursor: default;
-    background: transparent;
-}
-
-.list-item__folder {
-    width: 2em;
-    height: 2em;
-    fill: #800020;
-}
-
-.list-item_open > .list-item__items {
-    display: block;
-}
-
-.list-item_open > .list-item__inner .list-item__arrow {
-    transform: rotate(180deg);
+html {
+    font-family: 'HelveticaNeueCyr', sans-serif;
 }
