@@ -10,8 +10,8 @@
 <img width="413" height="530" alt="Снимок экрана 2025-12-19 в 19 58 25" src="https://github.com/user-attachments/assets/62dda39d-46c3-478b-91f3-3b6c8066a927" />
 <p>Победа X</p>
 <img width="449" height="513" alt="Снимок экрана 2025-12-19 в 19 59 22" src="https://github.com/user-attachments/assets/1bcd27e3-0e1e-4a5d-9cb6-13c38da0d1e3" />
-<p></p>
+<p>Победа О</p>
 <img width="408" height="504" alt="Снимок экрана 2025-12-19 в 20 01 03" src="https://github.com/user-attachments/assets/a22560de-b516-4232-beaa-05ae368eb884" />
-<p></p>
+<p>Ничья</p>
 <img width="411" height="513" alt="Снимок экрана 2025-12-19 в 20 00 10" src="https://github.com/user-attachments/assets/eb233eed-6c15-445c-9175-3fc4b911e145" />
 
