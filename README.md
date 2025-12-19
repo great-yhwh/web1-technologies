@@ -1,5 +1,6 @@
 Репозиторий для WebИС-ЛБ-ПИ-20
-Пример:
+
+<p>Пример:</p>
 <img width="232" height="439" alt="Снимок экрана 2025-12-19 в 18 58 05" src="https://github.com/user-attachments/assets/89ef9510-617e-498c-a14e-55af0bb264a5" />
 
 
