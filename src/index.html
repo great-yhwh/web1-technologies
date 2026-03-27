@@ -6,9 +6,77 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pizza</title>
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="./static/style/style.css">
 </head>
 <body>
-<script src="index.js"></script>
+    <div class="order-pizza">
+        <h1>Заказать пиццу</h1>
+        <div class="menu-pizza">
+            <!--Левая часть: Выбор пиццы-->
+            <div class="selection-pizza">
+                <h2>Выберите пиццу</h2>
+<!--                Пиццы-->
+                <div class="pizza-forms">
+<!--                    Карточки пицц-->
+                    <div class="pizza-form" data-type="Пепперони">
+                        <img src="assets/img/пицца-пепперони.avif" alt="Пепперони" class="pizza-img">
+                        <p>Пепперони</p>
+                    </div>
+
+                    <div class="pizza-form" data-type="Маргарита">
+                        <img src="assets/img/пицца-маргарита.avif" alt="Маргарита" class="pizza-img">
+                        <p>Маргарита</p>
+                    </div>
+
+                    <div class="pizza-form" data-type="Баварская">
+                        <img src="assets/img/пицца-баварская.avif" alt="Баварская" class="pizza-img">
+                        <p>Баварская</p>
+                    </div>
+                </div>
+            </div>
+<!--            Правая часть: Конфигурация пиццы&ndash;&gt;-->
+            <div class="order-pizza-configuration">
+                <!--            Размер пиццы-->
+                <div class="order-pizza-size-pizza">
+                    <h2>Выберите размер</h2>
+                    <div class="order-pizza-size-pizza-selector">
+                        <button class="size-option" data-size="Маленькая">
+                            Маленькая
+                        </button>
+                        <button class="size-option" data-size="Большая">
+                            Большая
+                        </button>
+                    </div>
+                </div>
+                <!--            Добавки-->
+                <div class="order-pizza-toppings">
+                    <h2>Добавить по вкусу</h2>
+                    <div class="order-pizza-toppings-forms">
+                        <!--                    Карточки добавок-->
+                        <div class="order-pizza-toppings-form" data-topping="сырный борт">
+                            <img src="assets/img/добавки-сырный-борт.png" alt="Добавка сырный бортик" class="topping-img">
+                            <p>Сырный бортик</p>
+                        </div>
+                        <div class="order-pizza-toppings-form" data-topping="сливочная моцарелла">
+                            <img src="assets/img/добавки-сливочная-моцарелла.png" alt="Добавки сливочная моцарелла" class="topping-img">
+                            <p>Сливочная моцарелла</p>
+                        </div>
+                        <div class="order-pizza-toppings-form" data-topping="чеддер и пармезан">
+                            <img src="assets/img/добавки-чеддер%20и%20пармезан.png" alt="Добавки чеддер и пармезан" class="topping-img">
+                            <p>Чеддер и пармезан</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="calculateBtn">
+                    Добавить за <span id="price">0</span> рублей (<span id="calories">0</span> кКалорий)
+                </button>
+            </div>
+            <!-- Результат -->
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>

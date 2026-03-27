@@ -25,54 +25,53 @@ class Pizza {
         },
     };
 
-    constructor(type, size) {
-        if (!Pizza.TYPES[type]) {
-            throw new Error(`Неизвестный вид пиццы: "${type}". Доступные: ${Object.keys(Pizza.TYPES).join(', ')}`);
-        }
-        if (!Pizza.SIZES[size]) {
-            throw new Error(`Неизвестный размер: "${size}". Доступные: ${Object.keys(Pizza.SIZES).join(', ')}`);
-        }
-
+    constructor(type = null, size = null) {
         this.type = type;
         this.size = size;
         this.toppings = [];
     }
 
+    setType(type) {
+        if (!Pizza.TYPES[type]) {
+            throw new Error(`Неизвестный вид пиццы: "${type}"`);
+        }
+        this.type = type;
+    }
+
+    setSize(size) {
+        if (!Pizza.SIZES[size]) {
+            throw new Error(`Неизвестный размер: "${size}"`);
+        }
+        this.size = size;
+    }
+
     addTopping(topping) {
         if (!Pizza.TOPPINGS[topping]) {
-            throw new Error(`Неизвестная добавка: "${topping}". Доступные: ${Object.keys(Pizza.TOPPINGS).join(', ')}`);
+            throw new Error(`Неизвестная добавка: "${topping}"`);
         }
-        if (this.toppings.includes(topping)) {
-            console.log(`Добавка "${topping}" уже добавлена.`);
-            return;
+        if (!this.toppings.includes(topping)) {
+            this.toppings.push(topping);
         }
-        this.toppings.push(topping);
-        console.log(`Добавка "${topping}" добавлена.`);
     }
 
     removeTopping(topping) {
         const index = this.toppings.indexOf(topping);
-        if (index === -1) {
-            console.log(`Добавка "${topping}" не найдена в пицце.`);
-            return;
+        if (index !== -1) {
+            this.toppings.splice(index, 1);
         }
-        this.toppings.splice(index, 1);
-        console.log(`Добавка "${topping}" убрана.`);
     }
 
-    getToppings() {
-        return [...this.toppings];
+    hasTopping(topping) {
+        return this.toppings.includes(topping);
     }
 
-    getSize() {
-        return this.size;
-    }
-
-    getStuffing() {
-        return this.type;
+    isComplete() {
+        return this.type !== null && this.size !== null;
     }
 
     calculatePrice() {
+        if (!this.isComplete()) return 0;
+
         let price = Pizza.TYPES[this.type].price;
         price += Pizza.SIZES[this.size].price;
 
@@ -84,6 +83,8 @@ class Pizza {
     }
 
     calculateCalories() {
+        if (!this.isComplete()) return 0;
+
         let calories = Pizza.TYPES[this.type].calories;
         calories += Pizza.SIZES[this.size].calories;
 
@@ -93,34 +94,80 @@ class Pizza {
 
         return calories;
     }
-
-    getInfo() {
-        const toppingsList = this.toppings.length > 0
-            ? this.toppings.join(', ')
-            : 'нет';
-
-        return `
-\n
-  Пицца: ${this.type}
-  Размер: ${this.size}
-  Добавки: ${toppingsList}
-
-  Цена: ${this.calculatePrice()} руб.
-  Калорийность: ${this.calculateCalories()} Ккал
-\n`;
-    }
 }
 
-// Тест : большая маргарита — добавить и убрать добавку
-console.log('Пицца 1');
-const pizza3 = new Pizza('Маргарита', 'Большая');
-pizza3.addTopping('сливочная моцарелла');
-pizza3.addTopping('сырный борт');
-console.log(`Добавки до удаления: ${pizza3.getToppings()}`);
+// ========== ИНИЦИАЛИЗАЦИЯ ==========
 
-pizza3.removeTopping('сырный борт');
-console.log(`Добавки после удаления: ${pizza3.getToppings()}`);
+let pizza = new Pizza();
 
-console.log(pizza3.getInfo());
-// Цена: 500 + 200 + 50 = 750 руб.
-// Калории: 300 + 200 + 20 = 520 Ккал
+//                 ВЫБОР ПИЦЦЫ
+document.querySelectorAll('.pizza-form').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelectorAll('.pizza-form').forEach(p => p.classList.remove('selected'));
+        item.classList.add('selected');
+
+        const type = item.dataset.type;
+        pizza.setType(type);
+
+        updateButton();
+    });
+});
+
+//                ВЫБОР РАЗМЕРА
+document.querySelectorAll('.size-option').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.size-option').forEach(b => b.classList.remove('selected'));
+        button.classList.add('selected');
+
+        const size = button.dataset.size;
+        pizza.setSize(size);
+
+        updateButton();
+    });
+});
+
+//                  ВЫБОР ДОБАВОК
+document.querySelectorAll('.order-pizza-toppings-form').forEach(item => {
+    item.addEventListener('click', () => {
+        const topping = item.dataset.topping;
+
+        if (pizza.hasTopping(topping)) {
+            pizza.removeTopping(topping);
+            item.classList.remove('selected');
+        } else {
+            pizza.addTopping(topping);
+            item.classList.add('selected');
+        }
+
+        updateButton();
+    });
+});
+
+//                  ОБНОВЛЕНИЕ КНОПКИ
+function updateButton() {
+    const totalPrice = pizza.calculatePrice();
+    const totalCalories = pizza.calculateCalories();
+
+    document.getElementById('price').textContent = totalPrice;
+    document.getElementById('calories').textContent = totalCalories;
+}
+
+//                  КНОПКА ЗАКАЗА
+document.getElementById('calculateBtn').addEventListener('click', () => {
+    if (!pizza.isComplete()) {
+        alert('Пожалуйста, выберите пиццу и размер!');
+        return;
+    }
+
+    const toppings = pizza.toppings.length > 0
+        ? pizza.toppings.join(', ')
+        : 'без добавок';
+
+    const result = `Заказ: ${pizza.type} (${pizza.size}), ${toppings}. 
+                    Цена: ${pizza.calculatePrice()} руб. 
+                    Калории: ${pizza.calculateCalories()} кКал`;
+
+    document.getElementById('result').textContent = result;
+});
+
+updateButton();
