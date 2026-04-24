@@ -90,6 +90,13 @@ body {
 }
 
 /* Кнопки размера */
+.order-pizza-size-pizza-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
 .order-pizza-size-pizza-selector {
     display: flex;
     gap: 10px;
