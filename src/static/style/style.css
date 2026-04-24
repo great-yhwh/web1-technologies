@@ -19,7 +19,8 @@ body {
 .menu-pizza {
     display: flex;
     gap: 10px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 8px;
 }
 
@@ -84,22 +85,65 @@ body {
 /* Правая колонка */
 .order-pizza-configuration {
     flex: 1;
-    background-color: #fff;
+    background-color: white;
     padding: 10px;
 
 }
 
-/* Кнопки размера */
 .order-pizza-size-pizza-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 50px;
 }
-
+/* Кнопки размера */
 .order-pizza-size-pizza-selector {
     display: flex;
-    gap: 10px;
+    position: relative;
+    width: 290px;
+    height: 35px;
+    background-color: #F0F0F5;
+    border-radius: 99px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.order-pizza-size-pizza-selector input[type="radio"] {
+    display: none;
+}
+
+.order-pizza-size-pizza-selector label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    z-index: 2;
+    position: relative;
+    user-select: none;
+}
+
+/* плашка-фон */
+.slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    height: calc(100% - 6px);
+    background-color: white;
+    border-radius: 99px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 0 2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1;
+}
+
+#size-small:checked ~ .slider {
+    transform: translateX(0);
+}
+
+#size-large:checked ~ .slider {
+    transform: translateX(100%);
 }
 
 .size-option {

@@ -44,13 +44,24 @@
                             <path d="M24 32V24M24 16H24.02M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
+<!--                    исправ-->
                     <div class="order-pizza-size-pizza-selector">
-                        <button class="size-option" data-size="Маленькая">
-                            Маленькая
-                        </button>
-                        <button class="size-option" data-size="Большая">
-                            Большая
-                        </button>
+                        <!-- Первая кнопка -->
+                        <input type="radio" id="size-small" name="size" checked>
+                        <label for="size-small">Маленькая</label>
+
+                        <!-- Вторая кнопка -->
+                        <input type="radio" id="size-large" name="size">
+                        <label for="size-large">Большая</label>
+
+                        <!-- Ползунок  -->
+                        <div class="slider"></div>
+<!--                        <button class="size-option" data-size="Маленькая">-->
+<!--                            Маленькая-->
+<!--                        </button>-->
+<!--                        <button class="size-option" data-size="Большая">-->
+<!--                            Большая-->
+<!--                        </button>-->
                     </div>
                 </div>
                 <!--            Добавки-->
