@@ -7,7 +7,7 @@ body {
 }
 
 .order-pizza {
-    max-width: 900px;
+    max-width: 970px;
     margin: auto;
     background-color: #f4f4f4;
     padding: 20px;
@@ -53,7 +53,7 @@ body {
 .pizza-form:hover,
 .order-pizza-toppings-form:hover {
     transform: scale(1.02);
-    background-color: #d3d3d3;
+    background-color: whitesmoke;
     border-radius: 8px;
 }
 
@@ -94,13 +94,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
+    gap: 150px;
 }
 /* Кнопки размера */
 .order-pizza-size-pizza-selector {
     display: flex;
     position: relative;
-    width: 290px;
+    width: 390px;
     height: 35px;
     background-color: #F0F0F5;
     border-radius: 99px;
@@ -165,17 +165,21 @@ body {
 }
 
 .order-pizza-toppings-form {
+    width: 100px;
+    height: 150px;
+    font-size: 12px;
     text-align: center;
     padding: 10px;
     background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09), 0 0 2px rgba(0, 0, 0, 0.09);
     border-radius: 8px;
     cursor: pointer;
     flex-direction: column;
 }
 
 .topping-img {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
 }
 
