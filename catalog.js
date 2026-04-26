@@ -1,64 +1,67 @@
-import { Catalog } from "./src/components/catalog.js"
+import { Catalog } from "./src/components/catalog.js";
 
-const renderPostItem = item => `
+const renderPostItem = (item) => `
     <a  
-        href="posts/${item.id}"
+        href="posts.html?id=${item.id}"
         class="post-item"
     >
-        <span class="post-item__title">
-            ${item.title}
-        </span>
-
-        <span class="post-item__body">
-            ${item.body}
-        </span>
+        <span class="post-item__title">${item.title}</span>
+        <span class="post-item__body">${item.body}</span>
     </a>
-`
+`;
 
-const getPostItems = ({ limit, page }) => {
-    return fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
-        .then(async res => {
-            const total = +res.headers.get('x-total-count')
-            const items = await res.json()
-            return { items, total }
-        })
-}
+const getPostItems = async ({ limit, page }) => {
+    let response;
+    try {
+        response = await fetch(
+            `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
+        );
+    } catch (error) {
+        console.error("Ошибка при загрузке постов:", error);
+        const catalogEl = document.getElementById('catalog');
+        if (catalogEl) {
+            catalogEl.innerHTML = `
+                <p style="color: red; padding: 30px; text-align: center;">
+                    Не удалось загрузить посты.<br><br>
+                    ${error.message}<br><br>
+                    <button onclick="location.reload()">Повторить попытку</button>
+                </p>`;
+        }
+        throw error;
+    }
 
-const renderPhotoItem = item => `
-    <a  
-        href="photos/${item.id}"
-        class="photo-item"
-    >
-        <span class="photo-item__title">
-            ${item.title}
-        </span>
+    if (!response.ok) {
+        const error = new Error(`HTTP error! Status: ${response.status}`);
+        console.error("Ошибка при загрузке постов:", error);
+        const catalogEl = document.getElementById('catalog');
+        if (catalogEl) {
+            catalogEl.innerHTML = `
+                <p style="color: red; padding: 30px; text-align: center;">
+                    Не удалось загрузить посты.<br><br>
+                    ${error.message}<br><br>
+                    <button onclick="location.reload()">Повторить попытку</button>
+                </p>`;
+        }
+        throw error;
+    }
 
-        <img 
-            src=${item.url}
-            class="photo-item__image"
-        >
-    </a>
-`
-
-const getPhotoItems = ({ limit, page }) => {
-    return fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`)
-        .then(async res => {
-            const total = +res.headers.get('x-total-count')
-            const items = await res.json()
-            return { items, total }
-        })
-}
+    const total = +response.headers.get('x-total-count');
+    const items = await response.json();
+    return { items, total };
+};
 
 const init = () => {
-    const catalog = document.getElementById('catalog')
-    new Catalog(catalog, { 
+    const catalogElement = document.getElementById("catalog");
+
+    new Catalog(catalogElement, {
         renderItem: renderPostItem,
         getItems: getPostItems
-     }).init()
-}
+    }).init();
+};
 
+// Запуск
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init)
+    document.addEventListener('DOMContentLoaded', init);
 } else {
-    init()
+    init();
 }

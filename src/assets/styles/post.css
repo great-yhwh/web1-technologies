@@ -11,3 +11,16 @@
 .post-item__title {
     font-weight: 600;
 }
+
+.comment {
+    border: 1px solid #ddd;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.comment-email {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
