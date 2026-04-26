@@ -47,11 +47,11 @@
 <!--                    исправ-->
                     <div class="order-pizza-size-pizza-selector">
                         <!-- Первая кнопка -->
-                        <input type="radio" id="size-small" name="size" checked>
+                        <input type="radio" id="size-small" name="size" value="Маленькая" checked>
                         <label for="size-small">Маленькая</label>
 
                         <!-- Вторая кнопка -->
-                        <input type="radio" id="size-large" name="size">
+                        <input type="radio" id="size-large" name="size" value="Большая">
                         <label for="size-large">Большая</label>
 
                         <!-- Ползунок  -->
@@ -64,22 +64,29 @@
 <!--                        </button>-->
                     </div>
                 </div>
-                <!--            Добавки-->
+                <!-- Добавки -->
                 <div class="order-pizza-toppings">
                     <h2>Добавить по вкусу</h2>
                     <div class="order-pizza-toppings-forms">
-                        <!--                    Карточки добавок-->
+                        <!-- Карточка 1 -->
                         <div class="order-pizza-toppings-form" data-topping="сырный борт">
-                            <img src="assets/img/добавки-сырный-борт.png" alt="Добавка сырный бортик" class="topping-img">
-                            <p>Сырный бортик</p>
+                            <img src="assets/img/добавки-сырный-борт.png" alt="Сырный бортик" class="topping-img">
+                            <span class="addon-title">Сырный<br>бортик</span>
+                            <span class="addon-price">-</span>
                         </div>
+
+                        <!-- Карточка 2 -->
                         <div class="order-pizza-toppings-form" data-topping="сливочная моцарелла">
-                            <img src="assets/img/добавки-сливочная-моцарелла.png" alt="Добавки сливочная моцарелла" class="topping-img">
-                            <p>Сливочная моцарелла</p>
+                            <img src="assets/img/добавки-сливочная-моцарелла.png" alt="Сливочная моцарелла" class="topping-img">
+                            <span class="addon-title">Сливочная<br>моцарелла</span>
+                            <span class="addon-price">-</span>
                         </div>
+
+                        <!-- Карточка 3 -->
                         <div class="order-pizza-toppings-form" data-topping="чеддер и пармезан">
-                            <img src="assets/img/добавки-чеддер%20и%20пармезан.png" alt="Добавки чеддер и пармезан" class="topping-img">
-                            <p>Чеддер и пармезан</p>
+                            <img src="assets/img/добавки-чеддер и пармезан.png" alt="Чеддер и пармезан" class="topping-img">
+                            <span class="addon-title">Чеддер и<br>пармезан</span>
+                            <span class="addon-price">-</span>
                         </div>
                     </div>
                 </div>

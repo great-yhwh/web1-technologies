@@ -12,22 +12,22 @@ class Pizza {
 
     static TOPPINGS = {
         'сливочная моцарелла': {
-            'Маленькая': { price: 50, calories: 20 },
-            'Большая': { price: 50, calories: 20 },
+            'Маленькая': { price: 99, calories: 25 },
+            'Большая':   { price: 129, calories: 35 },
         },
         'сырный борт': {
-            'Маленькая': { price: 150, calories: 50 },
-            'Большая': { price: 300, calories: 50 },
+            'Маленькая': { price: 189, calories: 70 },
+            'Большая':   { price: 289, calories: 100 },
         },
         'чеддер и пармезан': {
-            'Маленькая': { price: 150, calories: 50 },
-            'Большая': { price: 300, calories: 50 },
+            'Маленькая': { price: 99, calories: 40 },
+            'Большая':   { price: 139, calories: 60 },
         },
     };
 
-    constructor(type = null, size = null) {
-        this.type = type;
-        this.size = size;
+    constructor() {
+        this.type = null;
+        this.size = null;
         this.toppings = [];
     }
 
@@ -72,61 +72,52 @@ class Pizza {
     calculatePrice() {
         if (!this.isComplete()) return 0;
 
-        let price = Pizza.TYPES[this.type].price;
-        price += Pizza.SIZES[this.size].price;
+        let price = Pizza.TYPES[this.type].price + Pizza.SIZES[this.size].price;
 
         for (const topping of this.toppings) {
             price += Pizza.TOPPINGS[topping][this.size].price;
         }
-
         return price;
     }
 
     calculateCalories() {
         if (!this.isComplete()) return 0;
 
-        let calories = Pizza.TYPES[this.type].calories;
-        calories += Pizza.SIZES[this.size].calories;
+        let calories = Pizza.TYPES[this.type].calories + Pizza.SIZES[this.size].calories;
 
         for (const topping of this.toppings) {
             calories += Pizza.TOPPINGS[topping][this.size].calories;
         }
-
         return calories;
     }
 }
 
-// ========== ИНИЦИАЛИЗАЦИЯ ==========
-
+// ==================== ИНИЦИАЛИЗАЦИЯ ====================
 let pizza = new Pizza();
 
-//                 ВЫБОР ПИЦЦЫ
+// ==================== ВЫБОР ПИЦЦЫ ====================
 document.querySelectorAll('.pizza-form').forEach(item => {
     item.addEventListener('click', () => {
         document.querySelectorAll('.pizza-form').forEach(p => p.classList.remove('selected'));
         item.classList.add('selected');
 
-        const type = item.dataset.type;
-        pizza.setType(type);
-
+        pizza.setType(item.dataset.type);
         updateButton();
     });
 });
 
-//                ВЫБОР РАЗМЕРА
-document.querySelectorAll('.size-option').forEach(button => {
-    button.addEventListener('click', () => {
-        document.querySelectorAll('.size-option').forEach(b => b.classList.remove('selected'));
-        button.classList.add('selected');
-
-        const size = button.dataset.size;
-        pizza.setSize(size);
-
-        updateButton();
+// ==================== ВЫБОР РАЗМЕРА (radio) ====================
+document.querySelectorAll('input[name="size"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+        if (radio.checked) {
+            pizza.setSize(radio.value);
+            updateToppingPrices();
+            updateButton();
+        }
     });
 });
 
-//                  ВЫБОР ДОБАВОК
+// ==================== ВЫБОР ДОБАВОК ====================
 document.querySelectorAll('.order-pizza-toppings-form').forEach(item => {
     item.addEventListener('click', () => {
         const topping = item.dataset.topping;
@@ -143,7 +134,22 @@ document.querySelectorAll('.order-pizza-toppings-form').forEach(item => {
     });
 });
 
-//                  ОБНОВЛЕНИЕ КНОПКИ
+// ==================== ОБНОВЛЕНИЕ ЦЕН ДОБАВОК ИЗ JS ====================
+function updateToppingPrices() {
+    if (!pizza.size) return;
+
+    document.querySelectorAll('.order-pizza-toppings-form').forEach(card => {
+        const toppingName = card.dataset.topping;
+        const priceElement = card.querySelector('.addon-price');
+
+        if (Pizza.TOPPINGS[toppingName] && priceElement) {
+            const price = Pizza.TOPPINGS[toppingName][pizza.size].price;
+            priceElement.textContent = price + ' ₽';
+        }
+    });
+}
+
+// ==================== ОБНОВЛЕНИЕ КНОПКИ ====================
 function updateButton() {
     const totalPrice = pizza.calculatePrice();
     const totalCalories = pizza.calculateCalories();
@@ -152,22 +158,34 @@ function updateButton() {
     document.getElementById('calories').textContent = totalCalories;
 }
 
-//                  КНОПКА ЗАКАЗА
+// ==================== КНОПКА "ДОБАВИТЬ В ЗАКАЗ" ====================
 document.getElementById('calculateBtn').addEventListener('click', () => {
     if (!pizza.isComplete()) {
         alert('Пожалуйста, выберите пиццу и размер!');
         return;
     }
 
-    const toppings = pizza.toppings.length > 0
+    const toppingsText = pizza.toppings.length > 0
         ? pizza.toppings.join(', ')
         : 'без добавок';
 
-    const result = `Заказ: ${pizza.type} (${pizza.size}), ${toppings}. 
-                    Цена: ${pizza.calculatePrice()} руб. 
-                    Калории: ${pizza.calculateCalories()} кКал`;
+    const result = `Заказ: ${pizza.type} (${pizza.size}), ${toppingsText}.\n` +
+        `Цена: ${pizza.calculatePrice()} руб.\n` +
+        `Калории: ${pizza.calculateCalories()} кКал`;
 
     document.getElementById('result').textContent = result;
 });
 
-updateButton();
+// ==================== ЗАПУСК ПРИ ЗАГРУЗКЕ ====================
+function init() {
+    // Устанавливаем размер по умолчанию из выбранного radio
+    const checkedSize = document.querySelector('input[name="size"]:checked');
+    if (checkedSize) {
+        pizza.setSize(checkedSize.value);
+    }
+
+    updateToppingPrices();
+    updateButton();
+}
+
+init();
