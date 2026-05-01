@@ -1,1 +1,3 @@
-Репозиторий для WebИС-ЛБ-ПИ-20
+
+![todos.png](screenshots/todos.png)
+![profile.png](screenshots/profile.png)
