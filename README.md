@@ -10,3 +10,5 @@
 ![zadanie4.png](screenshots/zadanie4.png)
 Задание5
 ![zadanie5.png](screenshots/zadanie5.png)
+Задание6
+![zadanie6.png](screenshots/zadanie6.png)
