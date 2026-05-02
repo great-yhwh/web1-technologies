@@ -1,3 +1,4 @@
+(Здесь баг и скрины почему-то из lesson18,хотя в screenshots скрины верные)
 Начало
 ![start.png](screenshots/start.png)
 Задание1
