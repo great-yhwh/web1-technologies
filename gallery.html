@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фотогалерея</title>
+  <link rel="stylesheet" href="src/assets/styles/style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-left">
+      <h1>Фотогалерея</h1>
+      <p>ДА-ДА</p>
+    </div>
+    <div class="photo-count">{{photoCount}} фото</div>
+  </div>
+
+  <div id="flashMessage">{{uploadMessage}}</div>
+
+  <div class="upload-section">
+    <h2>Загрузка изображения</h2>
+    <form method="post" enctype="multipart/form-data" class="upload-form" id="uploadForm">
+      <div class="file-input-wrapper">
+        <input type="file" name="image" id="imageInput" accept="image/jpeg,image/png,image/gif" required>
+        <div id="clientError" class="file-hint" style="color: #ef4444; margin-top: 6px;"></div>
+      </div>
+      <button type="submit" class="upload-btn">Загрузить</button>
+    </form>
+    <div class="file-hint">Форматы: JPG, PNG, GIF. Размер до 5 МБ.</div>
+  </div>
+
+  <div class="gallery-section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <h2>Все фотографии</h2>
+      <button id="manageBtn" class="manage-btn">Удалить фото</button>
+    </div>
+    {{galleryHtml}}
+  </div>
+
+  <div class="footer">
+    Футер
+  </div>
+
+</div>
+
+<div id="deleteModal" class="custom-modal">
+  <div class="modal-content">
+    <p id="modalMessage">Вы уверены, что хотите удалить это фото?</p>
+    <div class="modal-buttons">
+      <button id="modalConfirm" class="modal-btn confirm">Удалить</button>
+      <button id="modalCancel" class="modal-btn cancel">Отмена</button>
+    </div>
+  </div>
+</div>
+
+<script src="gallery.js"></script>
+</body>
+</html>
