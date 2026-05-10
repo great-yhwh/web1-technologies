@@ -33,7 +33,7 @@
 .list-item__folder {
     width: 2em;
     height: 2em;
-    fill: #800020;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(54%) saturate(2870%) hue-rotate(335deg) brightness(91%) contrast(91%);
 }
 
 .list-item_open > .list-item__items {
