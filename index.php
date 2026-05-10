@@ -1,13 +1,12 @@
 <?php
-session_start(); // для flash-сообщений
 
-// Увеличиваем лимит памяти
+use Random\RandomException;
+
+session_start();
+
 ini_set('memory_limit', '512M');
 ini_set('max_execution_time', 120);
 
-// ==================================================
-// Блок логирования и работы с именами файлов
-// ==================================================
 
 function getNamesStoragePath(): string {
     return __DIR__ . '/images/.filenames.json';
@@ -66,18 +65,14 @@ function writeLog(): void {
 
 writeLog();
 
-// ==================================================
-// Пути
-// ==================================================
+
 $imagesDir = __DIR__ . '/images';
 $thumbsDir = __DIR__ . '/thumbs';
 
 if (!is_dir($imagesDir)) mkdir($imagesDir, 0755, true);
 if (!is_dir($thumbsDir)) mkdir($thumbsDir, 0755, true);
 
-// ==================================================
-// Удаление изображения (AJAX)
-// ==================================================
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_image'])) {
     header('Content-Type: application/json');
     $filename = basename($_POST['delete_image']);
@@ -97,9 +92,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_image'])) {
     exit;
 }
 
-// ==================================================
-// Функция создания миниатюры
-// ==================================================
 function makeThumbnail(string $srcPath, string $destPath, int $thumbWidth = 300): bool {
     $info = getimagesize($srcPath);
     if (!$info || !$info[0] || !$info[1]) return false;
@@ -144,9 +136,6 @@ function makeThumbnail(string $srcPath, string $destPath, int $thumbWidth = 300)
     return $success;
 }
 
-// ==================================================
-// Функция построения галереи
-// ==================================================
 function buildGallery(string $imagesDirPath, string $thumbsDirPath): string {
     $baseDir    = __DIR__;
     $originalNames = loadOriginalNames();
@@ -205,9 +194,6 @@ function buildGallery(string $imagesDirPath, string $thumbsDirPath): string {
     return $html;
 }
 
-// ==================================================
-// Обработка загрузки
-// ==================================================
 $uploadMessage = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
@@ -236,7 +222,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
     if (!$error) {
         $ext     = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
-        $newName = time() . '_' . bin2hex(random_bytes(5)) . '.' . $ext;
+        try {
+            $newName = time() . '_' . bin2hex(random_bytes(5)) . '.' . $ext;
+        } catch (RandomException $e) {
+
+        }
 
         $origPath  = $imagesDir . '/' . $newName;
         $thumbPath = $thumbsDir . '/' . $newName;
@@ -245,35 +235,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
             if (makeThumbnail($origPath, $thumbPath)) {
                 addOriginalName($newName, $file['name']);
                 $_SESSION['flash_message'] = '<div class="msg success">Изображение успешно добавлено в галерею!</div>';
-                header('Location: ' . $_SERVER['PHP_SELF']);
-                exit;
             } else {
                 unlink($origPath);
                 $_SESSION['flash_message'] = '<div class="msg error">Не удалось создать миниатюру (возможно, слишком большое изображение).</div>';
-                header('Location: ' . $_SERVER['PHP_SELF']);
-                exit;
             }
         } else {
             $_SESSION['flash_message'] = '<div class="msg error">Не удалось сохранить файл.</div>';
-            header('Location: ' . $_SERVER['PHP_SELF']);
-            exit;
         }
     } else {
         $_SESSION['flash_message'] = '<div class="msg error">' . htmlspecialchars($error) . '</div>';
-        header('Location: ' . $_SERVER['PHP_SELF']);
-        exit;
     }
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
 }
 
-// Показываем flash-сообщение, если оно есть
 if (isset($_SESSION['flash_message'])) {
     $uploadMessage = $_SESSION['flash_message'];
     unset($_SESSION['flash_message']);
 }
 
-// ==================================================
-// Данные для шаблона
-// ==================================================
 $galleryHtml = buildGallery($imagesDir, $thumbsDir);
 
 $photoCount = 0;
@@ -283,9 +263,6 @@ if (is_dir($imagesDir)) {
     }));
 }
 
-// ==================================================
-// Чтение и вывод шаблона с заменой плейсхолдеров
-// ==================================================
 $templateFile = __DIR__ . '/gallery.html';
 if (!file_exists($templateFile)) {
     die('Шаблон gallery.html не найден.');

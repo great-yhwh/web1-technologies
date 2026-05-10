@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #eef2f5;   /* чуть теплее, чем оригинал */
+    background: #eef2f5;
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     padding: 20px;
     color: #2c3e4e;
@@ -17,7 +17,6 @@ body {
     margin: 0 auto;
 }
 
-/* ===== Шапка ===== */
 .header {
     background: #ffffff;
     border-radius: 20px;
@@ -55,7 +54,6 @@ body {
     font-weight: 600;
 }
 
-/* ===== Форма загрузки ===== */
 .upload-section {
     background: #ffffff;
     border-radius: 20px;
@@ -134,7 +132,7 @@ body {
 }
 
 .upload-btn {
-    background: #7f8fa6;   /* приглушённый серо-синий */
+    background: #7f8fa6;
     border: none;
     height: 48px;
     padding: 0 30px;
@@ -156,7 +154,6 @@ body {
     transform: scale(0.98);
 }
 
-/* ===== Сообщения ===== */
 .msg {
     padding: 14px 22px;
     border-radius: 12px;
@@ -177,7 +174,6 @@ body {
     border: 1px solid #f4cfcf;
 }
 
-/* ===== Галерея ===== */
 .gallery-section {
     background: #ffffff;
     border-radius: 20px;
@@ -209,8 +205,7 @@ body {
 }
 
 .gallery-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item a {
@@ -243,9 +238,8 @@ body {
     font-size: 1rem;
 }
 
-/* ===== Кнопка управления удалением ===== */
 .manage-btn {
-    background: #b88787;   /* мягкий розовато-серый */
+    background: #b88787;
     border: none;
     padding: 8px 20px;
     border-radius: 40px;
@@ -270,7 +264,6 @@ body {
     background: #778899;
 }
 
-/* ===== Режим удаления: плавная тряска ===== */
 @keyframes shake {
     0% { transform: translate(0px, 0px) rotate(0deg); }
     25% { transform: translate(0.8px, 0.8px) rotate(0.8deg); }
@@ -284,7 +277,6 @@ body {
     cursor: pointer;
 }
 
-/* ===== Кнопка удаления (крестик) ===== */
 .delete-btn {
     position: absolute;
     top: 8px;
@@ -320,7 +312,6 @@ body {
     position: relative;
 }
 
-/* ===== Кастомный модальный диалог ===== */
 .custom-modal {
     display: none;
     position: fixed;
@@ -391,11 +382,23 @@ body {
 .msg {
     transition: opacity 0.5s ease;
 }
-.msg.fade-out {
-    opacity: 0;
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* ===== Футер ===== */
+.gallery-section h2 {
+    margin-bottom: 0;
+}
+
+.file-hint.error {
+    color: #9b5a5a;
+    margin-top: 6px;
+}
+
 .footer {
     text-align: center;
     padding: 25px 0 10px;
