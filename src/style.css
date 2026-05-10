@@ -19,7 +19,7 @@
     height: 1.5em;
     cursor: pointer;
     flex-shrink: 0;
-    fill: #808080;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(98%) contrast(92%);
     transition: transform 0.2s ease;
 }
 
