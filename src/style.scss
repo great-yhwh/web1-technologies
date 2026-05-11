@@ -30,3 +30,162 @@
 .list-item_open > .list-item__inner .list-item__arrow {
   transform: rotate(180deg);
 }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  h2 {
+    margin: 0.75rem 1rem 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .price {
+    font-weight: bold;
+    color: #800020;
+    font-size: 1.2rem;
+    margin: 0 1rem 0.5rem;
+  }
+
+  p {
+    margin: 0 1rem 1rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    background: #800020;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #a00028;
+    }
+  }
+}
+
+.product-detail {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    margin: 0 0 1rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #800020;
+    margin: 0.5rem 0;
+  }
+
+  .description {
+    line-height: 1.6;
+  }
+}
+
+.reviews {
+  margin: 2rem 0;
+
+  .review {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+
+    strong {
+      color: #333;
+    }
+
+    small {
+      color: #888;
+      font-size: 0.85rem;
+      margin-left: 0.5rem;
+    }
+
+    p {
+      margin: 0.5rem 0 0;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+      padding: 0;
+    }
+  }
+}
+
+.add-review-form,
+.edit-review-form {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+
+  button {
+    background: #800020;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+      background: #a00028;
+    }
+  }
+
+  #cancel-edit {
+    background: #666;
+    margin-left: 0.5rem;
+
+    &:hover {
+      background: #888;
+    }
+  }
+}

@@ -19,8 +19,8 @@
     height: 1.5em;
     cursor: pointer;
     flex-shrink: 0;
-    filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(98%) contrast(92%);
     transition: transform 0.2s ease;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(98%) contrast(92%);
 }
 
 .list-item__arrow.placeholder {
@@ -42,4 +42,409 @@
 
 .list-item_open > .list-item__inner .list-item__arrow {
     transform: rotate(180deg);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card h2 {
+    margin: 0.75rem 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #800020;
+    font-size: 1.2rem;
+    margin: 0 1rem 0.5rem;
+}
+
+.product-card p {
+    margin: 0 1rem 1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.product-card a {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    background: #800020;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.product-card a:hover {
+    background: #a00028;
+}
+
+.product-detail {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    margin: 0 0 1rem;
+}
+
+.product-detail .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #800020;
+    margin: 0.5rem 0;
+}
+
+.product-detail .description {
+    line-height: 1.6;
+}
+
+.reviews {
+    margin: 2rem 0;
+}
+
+.review {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.review strong {
+    color: #333;
+}
+
+.review small {
+    color: #888;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
+.review p {
+    margin: 0.5rem 0 0;
+}
+
+.review button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    padding: 0;
+}
+
+.add-review-form,
+.edit-review-form {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.add-review-form input,
+.add-review-form select,
+.add-review-form textarea,
+.edit-review-form input,
+.edit-review-form select,
+.edit-review-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.add-review-form button,
+.edit-review-form button {
+    background: #800020;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.add-review-form button:hover,
+.edit-review-form button:hover {
+    background: #a00028;
+}
+
+#cancel-edit {
+    background: #666;
+    margin-left: 0.5rem;
+}
+
+#cancel-edit:hover {
+    background: #888;
+}
+.reviews-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+}
+
+.reviews-summary {
+    flex: 1;
+    min-width: 200px;
+}
+
+.average-rating {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.rating-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #800020;
+    line-height: 1;
+}
+
+.rating-stars {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    color: #ffb400;
+    margin: 0.5rem 0;
+}
+
+.rating-count {
+    color: #666;
+}
+
+.btn-add-review {
+    width: 100%;
+    background: #800020;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.btn-add-review:hover {
+    background: #a00028;
+}
+.reviews-filters {
+    flex: 2;
+    min-width: 250px;
+}
+#searchReviews {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rating-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+.rating-filters button {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.rating-filters button.active {
+    background: #800020;
+    color: white;
+    border-color: #800020;
+}
+.rating-filters button:hover {
+    background: #ddd;
+}
+.review-form {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+}
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.form-header h3 {
+    margin: 0;
+}
+.close-form {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+}
+.close-form:hover {
+    color: #800020;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.rating-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.star-rating, .star-rating-edit {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+}
+.star-rating input, .star-rating-edit input {
+    display: none;
+}
+.star-rating label, .star-rating-edit label {
+    font-size: 1.8rem;
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.1s;
+}
+.star-rating input:checked ~ label,
+.star-rating-edit input:checked ~ label {
+    color: #ffb400;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating-edit label:hover,
+.star-rating-edit label:hover ~ label {
+    color: #ffb400;
+}
+.form-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+.form-actions button {
+    background: #800020;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.form-actions button:last-child {
+    background: #888;
+}
+.form-actions button:last-child:hover {
+    background: #666;
+}
+
+/* Карточка отзыва */
+.review-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s;
+}
+.review-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.review-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.review-header strong {
+    font-size: 1.05rem;
+}
+.review-rating {
+    color: #ffb400;
+    letter-spacing: 2px;
+}
+.review-header small {
+    color: #888;
+    font-size: 0.8rem;
+}
+.review-actions {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.8rem;
+}
+.review-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #800020;
+    font-size: 0.9rem;
+}
+.review-actions button:hover {
+    text-decoration: underline;
+}
+.no-reviews {
+    text-align: center;
+    color: #888;
+    padding: 2rem;
+}
+
+.back-link {
+    margin: 1rem 0;
+}
+.back-link a {
+    color: #800020;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    transition: margin 0.2s;
+}
+.back-link a:hover {
+    text-decoration: underline;
+    margin-left: -2px;
 }

@@ -1,0 +1,119 @@
+<!--suppress HtmlUnknownTarget -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="back-link">
+    <a href="index.php">&larr; Назад к каталогу</a>
+</div>
+
+<div class="product-detail">
+    <h1>{{ product_name }}</h1>
+    {{ product_image }}
+    <div class="price">{{ product_price }} руб.</div>
+    <div class="description">{{ product_description }}</div>
+</div>
+
+<div class="reviews-layout">
+    <div class="reviews-summary">
+        <div class="average-rating">
+            <div class="rating-value">{{ avg_rating }}</div>
+            <div class="rating-stars">{{ rating_stars }}</div>
+            <div class="rating-count">{{ reviews_count }} отзыва</div>
+        </div>
+        <button class="btn-add-review" id="showAddReviewBtn">Добавить отзыв</button>
+    </div>
+    <div class="reviews-filters">
+        <label for="searchReviews"></label><input type="text" id="searchReviews" placeholder="Поиск по отзывам...">
+        <div class="rating-filters">
+            <span>Оценка:</span>
+            <button data-rating="all" class="active">Все</button>
+            <button data-rating="5">★★★★★</button>
+            <button data-rating="4">★★★★☆</button>
+            <button data-rating="3">★★★☆☆</button>
+            <button data-rating="2">★★☆☆☆</button>
+            <button data-rating="1">★☆☆☆☆</button>
+        </div>
+    </div>
+</div>
+
+<!-- Форма добавления отзыва (скрыта) -->
+<div id="addReviewForm" class="review-form" style="display: none;">
+    <div class="form-header">
+        <h3>Ваш отзыв</h3>
+        <span class="close-form">&times;</span>
+    </div>
+    <form method="post">
+        <input type="hidden" name="action" value="add">
+        <div class="form-group">
+            <label>
+                <input type="text" name="author" placeholder="Ваше имя" required>
+            </label>
+        </div>
+        <div class="form-group rating-input">
+            <span>Оценка: </span>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>
+                <textarea name="text" rows="4" placeholder="Поделитесь впечатлениями..." required></textarea>
+            </label>
+        </div>
+        <div class="form-actions">
+            <button type="submit">Отправить</button>
+            <button type="button" id="cancelAddReviewBtn">Отмена</button>
+        </div>
+    </form>
+</div>
+
+<!-- Список отзывов -->
+<div class="reviews-list" id="reviewsList">
+    {{ reviews_list }}
+</div>
+
+<!-- Форма редактирования (скрыта) -->
+<div id="editReviewForm" class="review-form" style="display: none;">
+    <div class="form-header">
+        <h3>Редактировать отзыв</h3>
+        <span class="close-form">&times;</span>
+    </div>
+    <form method="post">
+        <input type="hidden" name="action" value="edit">
+        <input type="hidden" name="review_id" id="edit_review_id">
+        <div class="form-group">
+            <label for="edit_author"></label><input type="text" name="author" id="edit_author" placeholder="Автор" required>
+        </div>
+        <div class="form-group rating-input">
+            <span>Оценка: </span>
+            <div class="star-rating-edit">
+                <input type="radio" id="edit_star5" name="rating" value="5"><label for="edit_star5">★</label>
+                <input type="radio" id="edit_star4" name="rating" value="4"><label for="edit_star4">★</label>
+                <input type="radio" id="edit_star3" name="rating" value="3"><label for="edit_star3">★</label>
+                <input type="radio" id="edit_star2" name="rating" value="2"><label for="edit_star2">★</label>
+                <input type="radio" id="edit_star1" name="rating" value="1"><label for="edit_star1">★</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="edit_text"></label><textarea name="text" id="edit_text" rows="4" required></textarea>
+        </div>
+        <div class="form-actions">
+            <button type="submit">Сохранить</button>
+            <button type="button" id="cancelEditReviewBtn">Отмена</button>
+        </div>
+    </form>
+</div>
+
+<script src="product-scripts.js"></script>
+</body>
+</html>
